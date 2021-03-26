@@ -346,7 +346,7 @@ function Navigation(props) {
         onClick(e);
       },
       class: "inline",
-      src: "/login.svg",
+      src: "/login.webp",
       height: "40px",
       width: "40px",
       style: {
@@ -362,7 +362,7 @@ function Navigation(props) {
         onClick(e);
       },
       className: "inline",
-      src: "/login.svg",
+      src: "/login.webp",
       height: "40px",
       width: "40px",
       style: {
@@ -616,7 +616,7 @@ function Navigation(props) {
             },
             children: isAmp ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("amp-img", {
               class: "inline",
-              src: "/signip.svg",
+              src: "/signip.webp",
               height: "40px",
               width: "40px",
               style: {
@@ -626,7 +626,7 @@ function Navigation(props) {
               alt: "signup button represented with an icon"
             }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
               className: "inline",
-              src: "/signip.svg",
+              src: "/signip.webp",
               height: "40px",
               width: "40px",
               style: {
@@ -1168,12 +1168,12 @@ function Footer() {
                   marginRight: "4px"
                 },
                 children: [" ", isAmp ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("amp-img", {
-                  src: "/facebook.svg",
+                  src: "/facebook.webp",
                   alt: "facebook",
                   height: "11",
                   width: "11px"
                 }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])(image_default.a, {
-                  src: "/facebook.svg",
+                  src: "/facebook.webp",
                   alt: "facebook",
                   height: "11",
                   width: "11px"
@@ -1185,12 +1185,12 @@ function Footer() {
                   marginRight: "4px"
                 },
                 children: [" ", isAmp ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("amp-img", {
-                  src: "/instagram.svg",
+                  src: "/instagram.webp",
                   alt: "instagram",
                   height: "11",
                   width: "11px"
                 }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])(image_default.a, {
-                  src: "/instagram.svg",
+                  src: "/instagram.webp",
                   height: "11",
                   alt: "instagram",
                   width: "11px"
@@ -1202,12 +1202,12 @@ function Footer() {
                   marginRight: "4px"
                 },
                 children: [" ", isAmp ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("amp-img", {
-                  src: "/twitter.svg",
+                  src: "/twitter.webp",
                   alt: "twitter",
                   height: "11",
                   width: "11px"
                 }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])(image_default.a, {
-                  src: "/twitter.svg",
+                  src: "/twitter.webp",
                   alt: "twitter",
                   height: "11",
                   width: "11px"
@@ -1219,12 +1219,12 @@ function Footer() {
                   marginRight: "4px"
                 },
                 children: [" ", isAmp ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("amp-img", {
-                  src: "/linkedin.svg",
+                  src: "/linkedin.webp",
                   alt: "linkedin",
                   height: "11",
                   width: "11px"
                 }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])(image_default.a, {
-                  src: "/linkedin.svg",
+                  src: "/linkedin.webp",
                   alt: "linkedin",
                   height: "11",
                   width: "11px"
@@ -1236,12 +1236,12 @@ function Footer() {
                   marginRight: "4px"
                 },
                 children: [" ", isAmp ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("amp-img", {
-                  src: "/youtubeStudio.svg",
+                  src: "/youtubeStudio.webp",
                   alt: "youtubeStudio",
                   height: "11",
                   width: "11px"
                 }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])(image_default.a, {
-                  src: "/youtubeStudio.svg",
+                  src: "/youtubeStudio.webp",
                   alt: "youtubeStudio",
                   height: "11",
                   width: "11px"
