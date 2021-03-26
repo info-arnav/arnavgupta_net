@@ -465,6 +465,7 @@ function Navigation(props) {
           setStatus("loggedOut");
         } else {
           setStatus("loggedIn");
+          router.prefetch("/dashboard");
         }
       });
     } else {
@@ -480,6 +481,7 @@ function Navigation(props) {
             setStatus("loggedOut");
           } else {
             setStatus("loggedIn");
+            router.prefetch("/dashboard");
           }
         });
       } else {
