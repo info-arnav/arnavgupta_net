@@ -1,1 +1,0 @@
-{"ast":null,"code":"export default ((req, res) => {\n  res.status(200).send(\"active\");\n});","map":null,"metadata":{},"sourceType":"module"}

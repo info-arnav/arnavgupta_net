@@ -1,1 +1,0 @@
-{"ast":null,"code":"export default (async (req, res) => {\n  if (req.method == \"POST\") {} else {\n    res.status(404).send(\"error\");\n  }\n});","map":null,"metadata":{},"sourceType":"module"}
