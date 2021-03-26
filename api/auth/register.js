@@ -213,11 +213,7 @@ __webpack_require__.r(__webpack_exports__);
           tags: [],
           viewedTypes: [],
           liked: []
-        });
-        let finalData = await db.collection("userData").find({
-          username: req.body.username
-        }).limit(1).toArray();
-        await res.status(200).json(finalData);
+        }).then(e => res.status(200).json(e.ops));
       } else {
         res.status(202).json("email exists");
       }

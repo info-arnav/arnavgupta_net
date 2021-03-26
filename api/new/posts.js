@@ -98,8 +98,32 @@ module.exports =
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _util_mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("HfyN");
+/* harmony import */ var bcryptjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("yFn1");
+/* harmony import */ var bcryptjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bcryptjs__WEBPACK_IMPORTED_MODULE_1__);
+
+
 /* harmony default export */ __webpack_exports__["default"] = (async (req, res) => {
-  if (req.method == "POST") {} else {
+  if (req.method == "POST") {
+    const {
+      db
+    } = await Object(_util_mongodb__WEBPACK_IMPORTED_MODULE_0__[/* connectToDatabase */ "a"])();
+    const posts = await db.collection("posts").insertOne({
+      title: req.body.title,
+      username: req.body.username,
+      tags: req.body.tags,
+      blog: req.body.blog,
+      image: req.body.image,
+      imageDescription: req.body.imageDescription,
+      imageDescriptions: [req.body.imageDescription],
+      images: [req.body.image],
+      dateCreated: new Date(),
+      dateUpdated: new Date(),
+      bookmarks: [],
+      viewes: [],
+      likes: []
+    }).then(e => res.status(200).send(`/article/${e.ops[0]._id}`));
+  } else {
     res.status(404).send("error");
   }
 });
@@ -111,6 +135,80 @@ __webpack_require__.r(__webpack_exports__);
 
 module.exports = __webpack_require__("+ia5");
 
+
+/***/ }),
+
+/***/ "HfyN":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return connectToDatabase; });
+/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("ykE2");
+/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mongodb__WEBPACK_IMPORTED_MODULE_0__);
+
+const {
+  MONGODB_URI,
+  MONGODB_DB
+} = process.env;
+
+if (!MONGODB_URI) {
+  throw new Error("Please define the MONGODB_URI environment variable inside .env.local");
+}
+
+if (!MONGODB_DB) {
+  throw new Error("Please define the MONGODB_DB environment variable inside .env.local");
+}
+/**
+ * Global is used here to maintain a cached connection across hot reloads
+ * in development. This prevents connections growing exponentially
+ * during API Route usage.
+ */
+
+
+let cached = global.mongo;
+
+if (!cached) {
+  cached = global.mongo = {
+    conn: null,
+    promise: null
+  };
+}
+
+async function connectToDatabase() {
+  if (cached.conn) {
+    return cached.conn;
+  }
+
+  if (!cached.promise) {
+    const opts = {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    };
+    cached.promise = mongodb__WEBPACK_IMPORTED_MODULE_0__["MongoClient"].connect(MONGODB_URI, opts).then(client => {
+      return {
+        client,
+        db: client.db(MONGODB_DB)
+      };
+    });
+  }
+
+  cached.conn = await cached.promise;
+  return cached.conn;
+}
+
+/***/ }),
+
+/***/ "yFn1":
+/***/ (function(module, exports) {
+
+module.exports = require("bcryptjs");
+
+/***/ }),
+
+/***/ "ykE2":
+/***/ (function(module, exports) {
+
+module.exports = require("mongodb");
 
 /***/ })
 

@@ -176,14 +176,11 @@ __webpack_require__.r(__webpack_exports__);
     const {
       db
     } = await Object(_util_mongodb__WEBPACK_IMPORTED_MODULE_0__[/* connectToDatabase */ "a"])();
-    let user = await db.collection("userData").find({
-      username: req.body.username
-    }).limit(1).count();
     let userData = await db.collection("userData").find({
       username: req.body.username
     }).limit(1).toArray();
 
-    if (user == 0) {
+    if (userData.length == 0) {
       res.status(202).send("username");
     } else {
       bcryptjs__WEBPACK_IMPORTED_MODULE_1___default.a.compare(req.body.password, userData[0].password, function (err, result) {
