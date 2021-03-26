@@ -1,7 +1,7 @@
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = require('../../ssr-module-cache.js');
+/******/ 	var installedModules = require('../../../../ssr-module-cache.js');
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -96,97 +96,15 @@ module.exports =
 /***/ 7:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("fwAd");
+module.exports = __webpack_require__("zVwJ");
 
 
 /***/ }),
 
-/***/ "HfyN":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return connectToDatabase; });
-/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("ykE2");
-/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mongodb__WEBPACK_IMPORTED_MODULE_0__);
-
-const {
-  MONGODB_URI,
-  MONGODB_DB
-} = process.env;
-
-if (!MONGODB_URI) {
-  throw new Error("Please define the MONGODB_URI environment variable inside .env.local");
-}
-
-if (!MONGODB_DB) {
-  throw new Error("Please define the MONGODB_DB environment variable inside .env.local");
-}
-/**
- * Global is used here to maintain a cached connection across hot reloads
- * in development. This prevents connections growing exponentially
- * during API Route usage.
- */
-
-
-let cached = global.mongo;
-
-if (!cached) {
-  cached = global.mongo = {
-    conn: null,
-    promise: null
-  };
-}
-
-async function connectToDatabase() {
-  if (cached.conn) {
-    return cached.conn;
-  }
-
-  if (!cached.promise) {
-    const opts = {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    };
-    cached.promise = mongodb__WEBPACK_IMPORTED_MODULE_0__["MongoClient"].connect(MONGODB_URI, opts).then(client => {
-      return {
-        client,
-        db: client.db(MONGODB_DB)
-      };
-    });
-  }
-
-  cached.conn = await cached.promise;
-  return cached.conn;
-}
-
-/***/ }),
-
-/***/ "fwAd":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _util_mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("HfyN");
-
-/* harmony default export */ __webpack_exports__["default"] = (async (req, res) => {
-  const {
-    db
-  } = await Object(_util_mongodb__WEBPACK_IMPORTED_MODULE_0__[/* connectToDatabase */ "a"])();
-  await db.collection("posts").insertOne({
-    name: "sample"
-  });
-  const posts = await db.collection("posts").find({}).sort({
-    metacritic: -1
-  }).limit(20).toArray();
-  res.json(posts);
-});
-
-/***/ }),
-
-/***/ "ykE2":
+/***/ "zVwJ":
 /***/ (function(module, exports) {
 
-module.exports = require("mongodb");
+
 
 /***/ })
 
