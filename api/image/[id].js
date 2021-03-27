@@ -88,52 +88,15 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "+ia5":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _util_mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("HfyN");
-/* harmony import */ var bcryptjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("yFn1");
-/* harmony import */ var bcryptjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bcryptjs__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/* harmony default export */ __webpack_exports__["default"] = (async (req, res) => {
-  if (req.method == "POST") {
-    const {
-      db
-    } = await Object(_util_mongodb__WEBPACK_IMPORTED_MODULE_0__[/* connectToDatabase */ "a"])();
-    const posts = await db.collection("posts").insertOne({
-      title: req.body.title,
-      username: req.body.username,
-      tags: req.body.tags,
-      blog: req.body.blog,
-      image: req.body.image,
-      imageDescription: req.body.imageDescription,
-      imageDescriptions: [req.body.imageDescription],
-      images: [req.body.image],
-      dateCreated: new Date(),
-      dateUpdated: new Date(),
-      bookmarks: [],
-      viewes: [],
-      likes: []
-    }).then(e => res.status(200).send(`/article/${e.ops[0]._id}`));
-  } else {
-    res.status(404).send("error");
-  }
-});
-
-/***/ }),
-
-/***/ 9:
+/***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("+ia5");
+module.exports = __webpack_require__("yvn6");
 
 
 /***/ }),
@@ -198,10 +161,10 @@ async function connectToDatabase() {
 
 /***/ }),
 
-/***/ "yFn1":
+/***/ "tgNz":
 /***/ (function(module, exports) {
 
-module.exports = require("bcryptjs");
+module.exports = require("bson");
 
 /***/ }),
 
@@ -209,6 +172,38 @@ module.exports = require("bcryptjs");
 /***/ (function(module, exports) {
 
 module.exports = require("mongodb");
+
+/***/ }),
+
+/***/ "yvn6":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bson__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("tgNz");
+/* harmony import */ var bson__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bson__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util_mongodb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("HfyN");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (async (req, res) => {
+  const {
+    db
+  } = await Object(_util_mongodb__WEBPACK_IMPORTED_MODULE_1__[/* connectToDatabase */ "a"])();
+  const {
+    id
+  } = req.query;
+  const posts = await db.collection("posts").find({
+    _id: Object(bson__WEBPACK_IMPORTED_MODULE_0__["ObjectID"])(id)
+  }).toArray();
+  const image_string = posts[0].image;
+  const im = image_string.split(",")[1];
+  const img = Buffer.from(im, "base64");
+  res.writeHead(200, {
+    "Content-Type": "image/webp",
+    "Content-Length": img.length
+  });
+  res.end(img);
+});
 
 /***/ })
 

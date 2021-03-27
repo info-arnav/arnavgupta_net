@@ -88,12 +88,12 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 10:
+/***/ 11:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("aEv4");
@@ -135,7 +135,7 @@ function Article({
   const url = `https://www.arnavgupta.net/article/${data._id}`;
   const images = "https://www.arnavgupta.net/logo.png";
   const alts = "logo of the infinity website";
-  const imagec = data.image;
+  const imagec = `https://www.arnavgupta.net/api/image/${data._id}`;
   const altc = data.imageDescription;
   const tag = `blog, infinity, passionate bloggers, blogs, passionate, write, read, post, live thousand lives in one world, ${data.title}, ${data.tags && data.tags.toString()}`;
   const card = "summary_large_image";
