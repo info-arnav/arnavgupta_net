@@ -212,10 +212,6 @@ __webpack_require__.r(__webpack_exports__);
 // EXTERNAL MODULE: external "react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__("F5FC");
 
-// EXTERNAL MODULE: external "next/head"
-var head_ = __webpack_require__("xnum");
-var head_default = /*#__PURE__*/__webpack_require__.n(head_);
-
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__("cDcd");
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
@@ -241,9 +237,6 @@ var dynamic_default = /*#__PURE__*/__webpack_require__.n(dynamic_);
 
 // EXTERNAL MODULE: external "react-bootstrap"
 var external_react_bootstrap_ = __webpack_require__("IZS3");
-
-// EXTERNAL MODULE: external "next/amp"
-var amp_ = __webpack_require__("8hY/");
 
 // EXTERNAL MODULE: external "axios"
 var external_axios_ = __webpack_require__("zr5I");
@@ -277,16 +270,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
 const ReCAPTCHA = dynamic_default()(() => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(null, "1cau", 7)), {
   loadableGenerated: {
     webpack: () => [/*require.resolve*/("1cau")],
     modules: ["react-google-recaptcha"]
   }
 });
-const config = {
-  amp: "hybrid"
-};
 function Navigation(props) {
   const router = Object(router_["useRouter"])();
   const {
@@ -321,7 +310,6 @@ function Navigation(props) {
     0: validatedRegister,
     1: setValidatedRegister
   } = Object(external_react_["useState"])(false);
-  const isAmp = Object(amp_["useAmp"])();
   const {
     0: show,
     1: setShow
@@ -339,23 +327,7 @@ function Navigation(props) {
     children,
     onClick
   }, ref) => /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-    children: isAmp ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("amp-img", {
-      ref: ref,
-      onClick: e => {
-        e.preventDefault();
-        onClick(e);
-      },
-      class: "inline",
-      src: "/login.webp",
-      height: "40px",
-      width: "40px",
-      style: {
-        borderRadius: "50%",
-        marginLeft: "5px",
-        marginRight: "5px"
-      },
-      alt: "login profile dropdown icon"
-    }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
+    children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
       ref: ref,
       onClick: e => {
         e.preventDefault();
@@ -497,19 +469,7 @@ function Navigation(props) {
         children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
           href: "/",
           id: "image",
-          children: isAmp ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("amp-img", {
-            id: "image",
-            alt: "The logo of the website which showcases a symbol of infinity combined to wires",
-            src: "/logo.png",
-            width: "60px",
-            height: "60px",
-            style: {
-              borderRadius: "50%",
-              marginLeft: "5px",
-              marginRight: "5px"
-            },
-            class: "d-inline-block align-top"
-          }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
+          children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
             id: "image",
             alt: "The logo of the website which showcases a symbol of infinity combined to wires",
             src: "/logo.png",
@@ -616,17 +576,7 @@ function Navigation(props) {
               border: "none",
               backgroundColor: "transparent"
             },
-            children: isAmp ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("amp-img", {
-              class: "inline",
-              src: "/signip.webp",
-              height: "40px",
-              width: "40px",
-              style: {
-                borderRadius: "50%",
-                marginLeft: "2px"
-              },
-              alt: "signup button represented with an icon"
-            }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
+            children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
               className: "inline",
               src: "/signip.webp",
               height: "40px",
@@ -649,17 +599,7 @@ function Navigation(props) {
               marginRight: "10px",
               backgroundColor: "transparent"
             },
-            children: isAmp ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("amp-img", {
-              class: "inline",
-              src: "/login.png",
-              height: "40px",
-              width: "40px",
-              style: {
-                borderRadius: "50%",
-                marginLeft: "2px"
-              },
-              alt: "login button represented with an icon"
-            }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
+            children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
               className: "inline",
               src: "/login.png",
               height: "40px",
@@ -1051,12 +991,7 @@ var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 
 
 
-
-const footer_config = {
-  amp: "hybrid"
-};
 function Footer() {
-  const isAmp = Object(amp_["useAmp"])();
   const {
     0: validated,
     1: setValidated
@@ -1163,92 +1098,39 @@ function Footer() {
               children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("h5", {
                 className: "widget-title",
                 children: ["Follow up", /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {})]
-              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("a", {
+              }), [{
+                url: "https://www.facebook.com/infinity.newTechnology",
+                image: "/facebook.webp",
+                media: "facebook"
+              }, {
+                url: "https://www.instagram.com/infinity.newtech/",
+                image: "/instagram.webp",
+                media: "instagram"
+              }, {
+                url: "https://twitter.com/infinityNewTech",
+                image: "/twitter.webp",
+                media: "twitter"
+              }, {
+                url: "https://www.linkedin.com/in/arnav-gupta-0922341a9/",
+                image: "/linkedin.webp",
+                media: "linkedin"
+              }, {
+                url: "https://www.youtube.com/channel/UCzzfqCy-j9XZA5KNosqzh6w",
+                image: "/youtubeStudio.webp",
+                media: "youtubeStudio"
+              }].map(e => /*#__PURE__*/Object(jsx_runtime_["jsxs"])("a", {
                 className: "fa",
-                href: "https://www.facebook.com/infinity.newTechnology",
+                href: e.url,
                 style: {
                   marginRight: "4px"
                 },
-                children: [" ", isAmp ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("amp-img", {
-                  src: "/facebook.webp",
-                  alt: "facebook",
-                  height: "11",
-                  width: "11px"
-                }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])(image_default.a, {
-                  src: "/facebook.webp",
-                  alt: "facebook",
+                children: [" ", /*#__PURE__*/Object(jsx_runtime_["jsx"])(image_default.a, {
+                  src: e.image,
+                  alt: e.media,
                   height: "11",
                   width: "11px"
                 })]
-              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("a", {
-                className: "fa",
-                href: "https://www.instagram.com/infinity.newtech/",
-                style: {
-                  marginRight: "4px"
-                },
-                children: [" ", isAmp ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("amp-img", {
-                  src: "/instagram.webp",
-                  alt: "instagram",
-                  height: "11",
-                  width: "11px"
-                }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])(image_default.a, {
-                  src: "/instagram.webp",
-                  height: "11",
-                  alt: "instagram",
-                  width: "11px"
-                })]
-              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("a", {
-                className: "fa",
-                href: "\r https://twitter.com/infinityNewTech",
-                style: {
-                  marginRight: "4px"
-                },
-                children: [" ", isAmp ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("amp-img", {
-                  src: "/twitter.webp",
-                  alt: "twitter",
-                  height: "11",
-                  width: "11px"
-                }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])(image_default.a, {
-                  src: "/twitter.webp",
-                  alt: "twitter",
-                  height: "11",
-                  width: "11px"
-                })]
-              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("a", {
-                className: "fa",
-                href: "https://www.linkedin.com/in/arnav-gupta-0922341a9/",
-                style: {
-                  marginRight: "4px"
-                },
-                children: [" ", isAmp ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("amp-img", {
-                  src: "/linkedin.webp",
-                  alt: "linkedin",
-                  height: "11",
-                  width: "11px"
-                }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])(image_default.a, {
-                  src: "/linkedin.webp",
-                  alt: "linkedin",
-                  height: "11",
-                  width: "11px"
-                })]
-              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("a", {
-                className: "fa",
-                href: "https://www.youtube.com/channel/UCzzfqCy-j9XZA5KNosqzh6w",
-                style: {
-                  marginRight: "4px"
-                },
-                children: [" ", isAmp ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("amp-img", {
-                  src: "/youtubeStudio.webp",
-                  alt: "youtubeStudio",
-                  height: "11",
-                  width: "11px"
-                }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])(image_default.a, {
-                  src: "/youtubeStudio.webp",
-                  alt: "youtubeStudio",
-                  height: "11",
-                  width: "11px"
-                })]
-              })]
+              }))]
             })
           }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("br", {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])("br", {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
             className: "col-xs-12 col-sm-6 col-md-3",
@@ -1325,6 +1207,9 @@ function Footer() {
     })]
   });
 }
+// EXTERNAL MODULE: ./components/head.js
+var head = __webpack_require__("tXcZ");
+
 // EXTERNAL MODULE: ./node_modules/bootstrap/dist/css/bootstrap.min.css
 var bootstrap_min = __webpack_require__("q4sD");
 
@@ -1382,128 +1267,16 @@ function MyApp({
   const tags = "blog, infinity, passionate bloggers, blogs, passionate, write, read, post, live thousand lives in one world";
   const card = "summary_large_image";
   return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-    children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])(head_default.a, {
-      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("script", {
-        type: "application/ld+json",
-        dangerouslySetInnerHTML: {
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            url: url,
-            logo: imagec
-          })
-        }
-      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("script", {
-        type: "application/ld+json",
-        dangerouslySetInnerHTML: {
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "WebSite",
-            colleague: [],
-            image: imagec,
-            name: "Arnav Gupta",
-            url: url,
-            sameAs: ["https://www.youtube.com/channel/UCzzfqCy-j9XZA5KNosqzh6w", "https://www.instagram.com/infinity.newtech/", "https://www.linkedin.com/in/arnav-gupta-0922341a9/", "https://www.facebook.com/infinity.newTechnology", "https://twitter.com/infinityNewTech"]
-          })
-        }
-      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("title", {
-        children: title
-      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        name: "description",
-        content: description
-      }, "1"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        name: "robots",
-        content: "index, follow"
-      }, "2"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        name: "twitter:card",
-        content: "summary"
-      }, "3"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        name: "twitter:site",
-        content: "@infinityNewTech"
-      }, "4"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        name: "twitter:creator",
-        content: "@infinityNewTech"
-      }, "5"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        name: "twitter:description",
-        content: description
-      }, "6"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        name: "twitter:image",
-        content: imagec
-      }, "7"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        name: "twitter:image:alt",
-        content: altc
-      }, "8"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        property: "og:url",
-        content: url
-      }, "9"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        property: "og:title",
-        content: title
-      }, "10"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        property: "og:description",
-        content: description
-      }, "11"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        property: "og:image",
-        content: imagec
-      }, "12"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        property: "og:image:alt",
-        content: altc
-      }, "13"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        property: "og:title",
-        content: title
-      }, "14"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        property: "og:type",
-        content: "website"
-      }, "15"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        property: "og:url",
-        content: url
-      }, "16"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        property: "og:locale",
-        content: "en_IN"
-      }, "17"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        property: "og:site_name",
-        content: "Infinity"
-      }, "19"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        property: "og:description",
-        content: description
-      }, "20"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        property: "fb:app_id",
-        content: "478626783320499"
-      }, "21"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        property: "og:region",
-        content: "IN"
-      }, "22"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        name: "copyright",
-        content: "Infinity"
-      }, "23"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        name: "keywords",
-        content: tags
-      }, "24"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        name: "url",
-        content: url
-      }, "25"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        property: "og:locale",
-        content: "en_IN"
-      }, "26"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1"
-      }, "27"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        name: "theme-color",
-        content: "#000000"
-      }, "28"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("link", {
-        rel: "apple-touch-icon",
-        type: "image/png",
-        href: images
-      }, "29"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("link", {
-        rel: "manifest",
-        href: "/manifest.json"
-      }, "30"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("link", {
-        rel: "icon",
-        href: "/favicon.ico",
-        alt: alts
-      }, "31"), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
-        name: "twitter:title",
-        content: title
-      }, "32")]
+    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(head["a" /* default */], {
+      description: description,
+      title: title,
+      url: url,
+      images: images,
+      alts: alts,
+      imagec: imagec,
+      altc: altc,
+      tags: tags,
+      card: card
     }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Navigation, {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])("main", {
       children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Component, _app_objectSpread({}, pageProps))
     }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Footer, {})]
@@ -1840,13 +1613,6 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 }
 
 module.exports = _objectWithoutPropertiesLoose;
-
-/***/ }),
-
-/***/ "8hY/":
-/***/ (function(module, exports) {
-
-module.exports = require("next/amp");
 
 /***/ }),
 
@@ -4655,6 +4421,156 @@ module.exports = _extends;
 /***/ (function(module, exports) {
 
 
+
+/***/ }),
+
+/***/ "tXcZ":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Head; });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("xnum");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+function Head({
+  description,
+  title,
+  url,
+  images,
+  alts,
+  imagec,
+  altc,
+  tags,
+  card
+}) {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("script", {
+      type: "application/ld+json",
+      dangerouslySetInnerHTML: {
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          url: url,
+          logo: imagec
+        })
+      }
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("script", {
+      type: "application/ld+json",
+      dangerouslySetInnerHTML: {
+        __html: JSON.stringify({
+          "@context": "http://schema.org",
+          "@type": "WebSite",
+          colleague: [],
+          image: imagec,
+          name: "Arnav Gupta",
+          url: url,
+          sameAs: ["https://www.youtube.com/channel/UCzzfqCy-j9XZA5KNosqzh6w", "https://www.instagram.com/infinity.newtech/", "https://www.linkedin.com/in/arnav-gupta-0922341a9/", "https://www.facebook.com/infinity.newTechnology", "https://twitter.com/infinityNewTech"]
+        })
+      }
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("title", {
+      children: title
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      name: "description",
+      content: description
+    }, "1"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      name: "robots",
+      content: "index, follow"
+    }, "2"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      name: "twitter:card",
+      content: "summary"
+    }, "3"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      name: "twitter:site",
+      content: "@infinityNewTech"
+    }, "4"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      name: "twitter:creator",
+      content: "@infinityNewTech"
+    }, "5"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      name: "twitter:description",
+      content: description
+    }, "6"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      name: "twitter:image",
+      content: imagec
+    }, "7"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      name: "twitter:image:alt",
+      content: altc
+    }, "8"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      property: "og:url",
+      content: url
+    }, "9"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      property: "og:title",
+      content: title
+    }, "10"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      property: "og:description",
+      content: description
+    }, "11"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      property: "og:image",
+      content: imagec
+    }, "12"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      property: "og:image:alt",
+      content: altc
+    }, "13"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      property: "og:title",
+      content: title
+    }, "14"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      property: "og:type",
+      content: "website"
+    }, "15"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      property: "og:url",
+      content: url
+    }, "16"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      property: "og:locale",
+      content: "en_IN"
+    }, "17"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      property: "og:site_name",
+      content: "Infinity"
+    }, "19"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      property: "og:description",
+      content: description
+    }, "20"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      property: "fb:app_id",
+      content: "478626783320499"
+    }, "21"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      property: "og:region",
+      content: "IN"
+    }, "22"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      name: "copyright",
+      content: "Infinity"
+    }, "23"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      name: "keywords",
+      content: tags
+    }, "24"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      name: "url",
+      content: url
+    }, "25"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      property: "og:locale",
+      content: "en_IN"
+    }, "26"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1"
+    }, "27"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      name: "theme-color",
+      content: "#000000"
+    }, "28"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
+      rel: "apple-touch-icon",
+      type: "image/png",
+      href: images
+    }, "29"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
+      rel: "manifest",
+      href: "/manifest.json"
+    }, "30"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
+      rel: "icon",
+      href: "/favicon.ico",
+      alt: alts
+    }, "31"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      name: "twitter:title",
+      content: title
+    }, "32")]
+  });
+}
 
 /***/ }),
 
