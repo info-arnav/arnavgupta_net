@@ -1244,8 +1244,8 @@ function _app_defineProperty(obj, key, value) { if (key in obj) { Object.defineP
 
 
 
+ //loadProgressBar()
 
-Object(external_axios_progress_bar_["loadProgressBar"])();
 router_default.a.events.on("routeChangeStart", () => external_nprogress_default.a.start());
 router_default.a.events.on("routeChangeComplete", () => external_nprogress_default.a.done());
 router_default.a.events.on("routeChangeError", () => external_nprogress_default.a.done());

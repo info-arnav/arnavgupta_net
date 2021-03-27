@@ -119,7 +119,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("zr5I");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("tXcZ");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("tXcZ");
 
 
 
@@ -127,17 +129,18 @@ __webpack_require__.r(__webpack_exports__);
 function Article({
   data
 }) {
+  data = data[0];
   const description = "Infinity is both like a website and a diary. A place where all people across the globe get a chance to put their views and talent in front of everyone.";
-  const title = "Infinity | Live thousand lives in one world";
+  const title = `Infinity | ${data.title}`;
   const url = "https://www.arnavgupta.net";
   const images = "https://www.arnavgupta.net/logo.png";
   const alts = "logo of the infinity website";
-  const imagec = "https://www.arnavgupta.net/logo.png";
-  const altc = "logo of the infinity website";
-  const tags = "blog, infinity, passionate bloggers, blogs, passionate, write, read, post, live thousand lives in one world";
+  const imagec = data.image;
+  const altc = data.imageDescription;
+  const tag = `blog, infinity, passionate bloggers, blogs, passionate, write, read, post, live thousand lives in one world, ${data.title}, ${data.tags && data.tags.toString()}`;
   const card = "summary_large_image";
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
-    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_head__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_head__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], {
       description: description,
       title: title,
       url: url,
@@ -145,25 +148,30 @@ function Article({
       alts: alts,
       imagec: imagec,
       altc: altc,
-      tags: tags,
+      tags: tag,
       card: card
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-      children: data
-    })]
+    })
   });
 }
 async function getServerSideProps({
   params
 }) {
   const id = params.id;
-  let data = [];
-  const res = axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(`/api/data/posts/${id}`).then(e => data = e);
+  let res = await fetch(`https://www.arnavgupta.net/api/data/posts/${id}`);
+  let data = await res.json();
   return {
     props: {
       data
     }
   };
 }
+
+/***/ }),
+
+/***/ "cDcd":
+/***/ (function(module, exports) {
+
+module.exports = require("react");
 
 /***/ }),
 
