@@ -232,7 +232,7 @@ function Head({
       content: "index, follow"
     }, "2"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
       name: "twitter:card",
-      content: card | "summary"
+      content: card || "summary"
     }, "3"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
       name: "twitter:site",
       content: "@infinityNewTech"
