@@ -424,7 +424,7 @@ function Navigation(props) {
       }).then(e => {
         router.prefetch("/dashboard");
         setButtonLoading(false);
-        e.data != "username exists" && e.data != "email exists" ? (() => {
+        e.data != "username exists" && e.data != "email exists" && e.data != "error" ? (() => {
           localStorage.setItem("userData", external_njwt_default.a.create(e.data, "ArnavGod30080422020731017817087571441", "HS512"));
           credirect();
           setStatus("loggedIn");
@@ -448,7 +448,7 @@ function Navigation(props) {
       }).then(e => {
         router.prefetch("/dashboard");
         setButtonLoading(false);
-        e.data != "username" && e.data != "password" ? (() => {
+        e.data != "username" && e.data != "password" && e.data != "error" ? (() => {
           localStorage.setItem("userData", external_njwt_default.a.create(e.data, "ArnavGod30080422020731017817087571441", "HS512"));
           credirect();
           setStatus("loggedIn");
