@@ -242,7 +242,7 @@ var external_njwt_default = /*#__PURE__*/__webpack_require__.n(external_njwt_);
 // EXTERNAL MODULE: external "react-bootstrap"
 var external_react_bootstrap_ = __webpack_require__("IZS3");
 
-// CONCATENATED MODULE: ./components/customToggleSecond.js
+// CONCATENATED MODULE: ./components/forNavigation/customToggleSecond.js
 
 
 const CustomToggleSecond = /*#__PURE__*/external_react_default.a.forwardRef(({
@@ -268,7 +268,7 @@ const CustomToggleSecond = /*#__PURE__*/external_react_default.a.forwardRef(({
   children: [false ? undefined : "", "\u2193"]
 }));
 /* harmony default export */ var customToggleSecond = (CustomToggleSecond);
-// CONCATENATED MODULE: ./components/dropdownClosed.js
+// CONCATENATED MODULE: ./components/forNavigation/dropdownClosed.js
 
 
 
@@ -301,7 +301,7 @@ function Dropdownse(status) {
     })
   });
 }
-// CONCATENATED MODULE: ./components/dropdownopen.js
+// CONCATENATED MODULE: ./components/forNavigation/dropdownopen.js
 
 
 
@@ -358,7 +358,7 @@ function ddo({
     }))]
   });
 }
-// CONCATENATED MODULE: ./components/customToggle.js
+// CONCATENATED MODULE: ./components/forNavigation/customToggle.js
 
 
 const CustomToggle = /*#__PURE__*/external_react_default.a.forwardRef(({
@@ -385,7 +385,7 @@ const CustomToggle = /*#__PURE__*/external_react_default.a.forwardRef(({
   })
 }));
 /* harmony default export */ var customToggle = (CustomToggle);
-// CONCATENATED MODULE: ./components/signed.js
+// CONCATENATED MODULE: ./components/forNavigation/signed.js
 
 
 
@@ -431,7 +431,7 @@ function Signed() {
 var external_axios_ = __webpack_require__("zr5I");
 var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
 
-// CONCATENATED MODULE: ./components/login.js
+// CONCATENATED MODULE: ./components/forNavigation/login.js
 
 
 
@@ -602,7 +602,7 @@ function Login() {
     })]
   });
 }
-// CONCATENATED MODULE: ./components/register.js
+// CONCATENATED MODULE: ./components/forNavigation/register.js
 
 
 
@@ -831,7 +831,7 @@ function Register() {
     })]
   });
 }
-// CONCATENATED MODULE: ./components/unsigned.js
+// CONCATENATED MODULE: ./components/forNavigation/unsigned.js
 
 
 
