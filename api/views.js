@@ -1,7 +1,7 @@
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = require('../../../ssr-module-cache.js');
+/******/ 	var installedModules = require('../../ssr-module-cache.js');
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -88,61 +88,15 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "+ia5":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _util_mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("HfyN");
-/* harmony import */ var bcryptjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("yFn1");
-/* harmony import */ var bcryptjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bcryptjs__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/* harmony default export */ __webpack_exports__["default"] = (async (req, res) => {
-  if (req.method == "POST") {
-    const {
-      db
-    } = await Object(_util_mongodb__WEBPACK_IMPORTED_MODULE_0__[/* connectToDatabase */ "a"])();
-    const posts = await db.collection("posts").insertOne({
-      title: req.body.title,
-      username: req.body.username,
-      tags: req.body.tags,
-      blog: req.body.blog,
-      image: req.body.image,
-      imageDescription: req.body.imageDescription,
-      imageDescriptions: [req.body.imageDescription],
-      images: [req.body.image],
-      dateCreated: new Date(),
-      dateUpdated: new Date(),
-      bookmarks: [],
-      views: [],
-      likes: []
-    }).then(async e => {
-      await db.collection("userData").update({
-        username: req.body.username
-      }, {
-        $push: {
-          posts: e.ops[0]._id
-        }
-      });
-      return e;
-    }).then(e => res.status(200).send(`/article/${e.ops[0]._id}`));
-  } else {
-    res.status(404).send("error");
-  }
-});
-
-/***/ }),
-
-/***/ 9:
+/***/ 11:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("+ia5");
+module.exports = __webpack_require__("hGOw");
 
 
 /***/ }),
@@ -204,6 +158,41 @@ async function connectToDatabase() {
   cached.conn = await cached.promise;
   return cached.conn;
 }
+
+/***/ }),
+
+/***/ "hGOw":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _util_mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("HfyN");
+/* harmony import */ var bcryptjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("yFn1");
+/* harmony import */ var bcryptjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bcryptjs__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/* harmony default export */ __webpack_exports__["default"] = (async (req, res) => {
+  if (req.method == "POST") {
+    const {
+      db
+    } = await Object(_util_mongodb__WEBPACK_IMPORTED_MODULE_0__[/* connectToDatabase */ "a"])();
+    await db.collection("posts").update({
+      _id: req.body.post
+    }, {
+      $push: {
+        views: req.body.user
+      }
+    }).then(async (e) => await db.collection("userData").update({
+      username: req.body.user
+    }, {
+      $push: {
+        viewedPosts: req.body.post
+      }
+    })).then(e => res.status(200).send("done"));
+  } else {
+    res.status(404).send("error");
+  }
+});
 
 /***/ }),
 

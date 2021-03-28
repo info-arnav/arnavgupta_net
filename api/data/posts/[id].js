@@ -181,6 +181,8 @@ __webpack_require__.r(__webpack_exports__);
   const posts = await db.collection("posts").find({
     _id: Object(bson__WEBPACK_IMPORTED_MODULE_0__["ObjectID"])(id)
   }).toArray();
+  posts.images = [];
+  posts.image = "";
   res.json(posts);
 });
 

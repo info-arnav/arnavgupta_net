@@ -88,12 +88,12 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 11:
+/***/ 12:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("aEv4");
@@ -105,6 +105,13 @@ module.exports = __webpack_require__("aEv4");
 /***/ (function(module, exports) {
 
 module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ "R6Q3":
+/***/ (function(module, exports) {
+
+module.exports = require("njwt");
 
 /***/ }),
 
@@ -122,6 +129,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("cDcd");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("tXcZ");
+/* harmony import */ var njwt__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("R6Q3");
+/* harmony import */ var njwt__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(njwt__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -139,6 +149,18 @@ function Article({
   const altc = data.imageDescription;
   const tag = `blog, infinity, passionate bloggers, blogs, passionate, write, read, post, live thousand lives in one world, ${data.title}, ${data.tags && data.tags.toString()}`;
   const card = "summary_large_image";
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
+    if (localStorage.getItem("userData")) {
+      njwt__WEBPACK_IMPORTED_MODULE_4___default.a.verify(localStorage.getItem("userData"), "ArnavGod30080422020731017817087571441", "HS512", async function (err, verifiedJwt) {
+        if (!err) {
+          await axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("/api/views", {
+            post: data._id,
+            user: data.username
+          });
+        }
+      });
+    }
+  });
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
     children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_head__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], {
       description: description,
