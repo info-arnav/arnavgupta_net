@@ -206,50 +206,24 @@ module.exports = __webpack_require__("1TCz");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__("F5FC");
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__("cDcd");
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// EXTERNAL MODULE: ./node_modules/next/link.js
-var next_link = __webpack_require__("YFqc");
-var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
-
-// EXTERNAL MODULE: external "algoliasearch/lite"
-var lite_ = __webpack_require__("5pUN");
-var lite_default = /*#__PURE__*/__webpack_require__.n(lite_);
-
-// EXTERNAL MODULE: external "next/router"
-var router_ = __webpack_require__("4Q3z");
-var router_default = /*#__PURE__*/__webpack_require__.n(router_);
-
-// EXTERNAL MODULE: external "react-instantsearch-dom"
-var external_react_instantsearch_dom_ = __webpack_require__("C3xT");
-
-// EXTERNAL MODULE: external "next/dynamic"
-var dynamic_ = __webpack_require__("/T1H");
-var dynamic_default = /*#__PURE__*/__webpack_require__.n(dynamic_);
-
-// EXTERNAL MODULE: external "react-bootstrap"
-var external_react_bootstrap_ = __webpack_require__("IZS3");
-
-// EXTERNAL MODULE: external "axios"
-var external_axios_ = __webpack_require__("zr5I");
-var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
-
-// EXTERNAL MODULE: external "njwt"
-var external_njwt_ = __webpack_require__("R6Q3");
-var external_njwt_default = /*#__PURE__*/__webpack_require__.n(external_njwt_);
-
-// EXTERNAL MODULE: external "next/dist/next-server/lib/router/router"
-var router_router_ = __webpack_require__("YnbB");
-
-// CONCATENATED MODULE: ./components/navigation.js
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("kwih");
+/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("aIN1");
+/* harmony import */ var _components_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("tXcZ");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("q4sD");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("4Q3z");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var nprogress_nprogress_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("pdi6");
+/* harmony import */ var nprogress_nprogress_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(nprogress_nprogress_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("GvLQ");
+/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("zPlV");
+/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var axios_progress_bar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("jQS+");
+/* harmony import */ var axios_progress_bar__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(axios_progress_bar__WEBPACK_IMPORTED_MODULE_9__);
 
 
 
@@ -267,989 +241,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
-
-
-const ReCAPTCHA = dynamic_default()(() => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(null, "1cau", 7)), {
-  loadableGenerated: {
-    webpack: () => [/*require.resolve*/("1cau")],
-    modules: ["react-google-recaptcha"]
-  }
-});
-function Navigation(props) {
-  const router = Object(router_["useRouter"])();
-  const {
-    0: validatedLogin,
-    1: setValidatedLogin
-  } = Object(external_react_["useState"])(false);
-  const {
-    0: password,
-    1: setPassword
-  } = Object(external_react_["useState"])("");
-  const {
-    0: email,
-    1: setEmail
-  } = Object(external_react_["useState"])("");
-  const {
-    0: name,
-    1: setName
-  } = Object(external_react_["useState"])("");
-  const {
-    0: error,
-    1: setError
-  } = Object(external_react_["useState"])("");
-  const {
-    0: username,
-    1: setUsername
-  } = Object(external_react_["useState"])("");
-  const {
-    0: buttonLoading,
-    1: setButtonLoading
-  } = Object(external_react_["useState"])(false);
-  const {
-    0: validatedRegister,
-    1: setValidatedRegister
-  } = Object(external_react_["useState"])(false);
-  const {
-    0: show,
-    1: setShow
-  } = Object(external_react_["useState"])(false);
-  const {
-    0: state,
-    1: setState
-  } = Object(external_react_["useState"])("register");
-  const {
-    0: status,
-    1: setStatus
-  } = Object(external_react_["useState"])(false);
-  const searchClient = lite_default()("8PCXEU15SU", "7b08d93fde9eb5eebb3d081f764b2ec4");
-  const CustomToggle = /*#__PURE__*/external_react_default.a.forwardRef(({
-    children,
-    onClick
-  }, ref) => /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-    children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
-      ref: ref,
-      onClick: e => {
-        e.preventDefault();
-        onClick(e);
-      },
-      className: "inline",
-      src: "/login.webp",
-      height: "40px",
-      width: "40px",
-      style: {
-        borderRadius: "50%",
-        marginLeft: "5px",
-        marginRight: "5px"
-      },
-      alt: "login profile dropdown icon"
-    })
-  }));
-  const CustomToggleSecond = /*#__PURE__*/external_react_default.a.forwardRef(({
-    children,
-    onClick
-  }, ref) => /*#__PURE__*/Object(jsx_runtime_["jsxs"])("button", {
-    ref: ref,
-    style: {
-      marginRight: "10px",
-      marginLeft: "10px",
-      width: "85px",
-      padding: "0.25px",
-      paddingLeft: "0"
-    },
-    onClick: e => {
-      e.preventDefault();
-      onClick(e);
-    },
-    className: "btn btn-4 btn-4c icon-arrow-right",
-    id: "data",
-    "wfd-id": "62",
-    children: [false ? undefined : "", "\u2193"]
-  }));
-
-  const credirect = () => {
-    setState("");
-    setState("loggedIn");
-    setValidatedRegister(false);
-    setPassword("");
-    setEmail("");
-    setName("");
-    setUsername("");
-    setError("");
-    router.push("/dashboard");
-  };
-
-  const handleSubmitRegister = event => {
-    const form = event.currentTarget;
-    event.preventDefault();
-
-    if (form.checkValidity() === false) {
-      event.stopPropagation();
-      setValidatedRegister(true);
-    } else {
-      setButtonLoading(true);
-      external_axios_default.a.post("/api/auth/register", {
-        username: username,
-        password: password,
-        email: email,
-        name: name
-      }).then(e => {
-        router.prefetch("/dashboard");
-        setButtonLoading(false);
-        e.data != "username exists" && e.data != "email exists" && e.data != "error" ? (() => {
-          localStorage.setItem("userData", external_njwt_default.a.create(e.data, "ArnavGod30080422020731017817087571441", "HS512"));
-          credirect();
-          setStatus("loggedIn");
-        })() : setError(e.data);
-      });
-    }
-  };
-
-  const handleSubmitLogin = event => {
-    const form = event.currentTarget;
-    event.preventDefault();
-
-    if (form.checkValidity() === false) {
-      event.stopPropagation();
-      setValidatedLogin(true);
-    } else {
-      setButtonLoading(true);
-      external_axios_default.a.post("/api/auth/login", {
-        username: username,
-        password: password
-      }).then(e => {
-        router.prefetch("/dashboard");
-        setButtonLoading(false);
-        e.data != "username" && e.data != "password" && e.data != "error" ? (() => {
-          localStorage.setItem("userData", external_njwt_default.a.create(e.data, "ArnavGod30080422020731017817087571441", "HS512"));
-          credirect();
-          setStatus("loggedIn");
-        })() : setError(e.data);
-      });
-    }
-  };
-
-  Object(external_react_["useEffect"])(() => {
-    if (localStorage.getItem("userData")) {
-      external_njwt_default.a.verify(localStorage.getItem("userData"), "ArnavGod30080422020731017817087571441", "HS512", function (err, verifiedJwt) {
-        if (err) {
-          localStorage.removeItem("userData");
-          setStatus("loggedOut");
-        } else {
-          setStatus("loggedIn");
-          router.prefetch("/dashboard");
-        }
-      });
-    } else {
-      setStatus("loggedOut");
-    }
-  }, []);
-  Object(external_react_["useEffect"])(() => {
-    window.addEventListener("storage", () => {
-      if (localStorage.getItem("userData")) {
-        external_njwt_default.a.verify(localStorage.getItem("userData"), "ArnavGod30080422020731017817087571441", "HS512", function (err, verifiedJwt) {
-          if (err) {
-            localStorage.removeItem("userData");
-            setStatus("loggedOut");
-          } else {
-            setStatus("loggedIn");
-            router.prefetch("/dashboard");
-          }
-        });
-      } else {
-        setStatus("loggedOut");
-      }
-    });
-  }, []);
-  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_instantsearch_dom_["InstantSearch"], {
-      searchClient: searchClient,
-      indexName: "dev_BLOGS",
-      children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("nav", {
-        children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-          href: "/",
-          id: "image",
-          children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
-            id: "image",
-            alt: "The logo of the website which showcases a symbol of infinity combined to wires",
-            src: "/logo.png",
-            width: "60px",
-            height: "60px",
-            style: {
-              borderRadius: "50%",
-              marginLeft: "5px",
-              marginRight: "5px"
-            },
-            className: "d-inline-block align-top"
-          })
-        }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-          children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Dropdown"], {
-            id: "navToggle",
-            children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Dropdown"].Toggle, {
-              as: CustomToggleSecond
-            }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Dropdown"].Menu, {
-              children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Dropdown"].Item, {
-                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-                  href: "/",
-                  children: "Home"
-                })
-              }, "home"), status && (status == "loggedIn" ? /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Dropdown"].Item, {
-                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-                  href: "/blogs",
-                  children: "Blogs"
-                })
-              }, "blogs") : /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Dropdown"].Item, {
-                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-                  href: "/about",
-                  children: "About"
-                })
-              }, "about"))]
-            }), " "]
-          })
-        }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-          id: "inDropdown",
-          children: [" ", /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-            href: "/",
-            style: {
-              display: "inherit",
-              marginRight: "10px"
-            },
-            children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
-              className: "btn btn-4 btn-4c icon-arrow-right",
-              style: {
-                marginRight: "5px"
-              },
-              id: false ? undefined : "data",
-              "wfd-id": "62",
-              children: "Home"
-            })
-          }), status && (status != "loggedIn" ? /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-            href: "/about",
-            style: {
-              display: "inherit",
-              marginRight: "10px"
-            },
-            children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
-              className: "btn btn-4 btn-4c icon-arrow-right",
-              style: {
-                marginRight: "5px"
-              },
-              id: false ? undefined : "data",
-              "wfd-id": "62",
-              children: "About"
-            })
-          }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-            href: "/blogs",
-            style: {
-              display: "inherit",
-              marginRight: "10px"
-            },
-            children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
-              className: "btn btn-4 btn-4c icon-arrow-right",
-              style: {
-                marginRight: "5px"
-              },
-              id: false ? undefined : "data",
-              "wfd-id": "62",
-              children: "Blogs"
-            })
-          }))]
-        }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_instantsearch_dom_["SearchBox"], {
-          style: {
-            width: "100%"
-          },
-          translations: {
-            placeholder: "Search"
-          }
-        }), status && (status !== "loggedIn" ? /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-          style: {
-            display: "inherit"
-          },
-          children: [" ", /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
-            onClick: () => {
-              setShow(true);
-              setState("register");
-            },
-            style: {
-              padding: "0",
-              marginLeft: "2px",
-              border: "none",
-              backgroundColor: "transparent"
-            },
-            children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
-              className: "inline",
-              src: "/signip.webp",
-              height: "40px",
-              width: "40px",
-              style: {
-                borderRadius: "50%",
-                marginLeft: "2px"
-              },
-              alt: "signup button represented with an icon"
-            })
-          }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
-            onClick: () => {
-              setShow(true);
-              setState("login");
-            },
-            style: {
-              padding: "0",
-              border: "none",
-              marginLeft: "2px",
-              marginRight: "10px",
-              backgroundColor: "transparent"
-            },
-            children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
-              className: "inline",
-              src: "/login.png",
-              height: "40px",
-              width: "40px",
-              style: {
-                borderRadius: "50%",
-                marginLeft: "2px"
-              },
-              alt: "login button represented with an icon"
-            })
-          })]
-        }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-          children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Dropdown"], {
-            children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Dropdown"].Toggle, {
-              as: CustomToggle
-            }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Dropdown"].Menu, {
-              children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Dropdown"].Item, {
-                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-                  href: "/active",
-                  children: "Profile"
-                })
-              }, "profile"), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Dropdown"].Item, {
-                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-                  href: "/bookmarked",
-                  children: "Bookmarks"
-                })
-              }, "bookmarks"), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Dropdown"].Item, {
-                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-                  href: "/dashboard",
-                  children: "New Post"
-                })
-              }, "new post"), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Dropdown"].Item, {
-                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
-                  onClick: () => {
-                    localStorage.removeItem("userData");
-                    setStatus("loggedOut");
-                    router.push("/");
-                  },
-                  children: "Logout"
-                })
-              }, "logout")]
-            })]
-          })
-        }))]
-      })
-    }), state == "register" && /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Modal"], _objectSpread(_objectSpread({
-      size: "lg"
-    }, props), {}, {
-      "aria-labelledby": "contained-modal-title-vcenter",
-      centered: true,
-      show: show,
-      onHide: () => {
-        setShow(false);
-        setValidatedRegister(false);
-        setPassword("");
-        setEmail("");
-        setName("");
-        setUsername("");
-        setError("");
-      },
-      children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Form"], {
-        noValidate: true,
-        validated: validatedRegister,
-        onSubmit: handleSubmitRegister,
-        children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Modal"].Header, {
-          closeButton: true,
-          children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Modal"].Title, {
-            children: "Register"
-          })
-        }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Modal"].Body, {
-          children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Row, {
-            children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Form"].Group, {
-              controlId: "validationCustom03",
-              style: {
-                width: "100%"
-              },
-              children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Label, {
-                children: "Name"
-              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Control, {
-                type: "text",
-                placeholder: "Name",
-                required: true,
-                value: name,
-                onChange: e => setName(e.target.value)
-              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Control.Feedback, {
-                type: "invalid",
-                children: "Please provide a valid name."
-              })]
-            })
-          }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Row, {
-            children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Form"].Group, {
-              controlId: "validationCustom03",
-              style: {
-                width: "100%"
-              },
-              children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Label, {
-                children: "Email"
-              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Control, {
-                pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}",
-                type: "text",
-                value: email,
-                onChange: e => setEmail(e.target.value),
-                placeholder: "Email",
-                required: true
-              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Control.Feedback, {
-                type: "invalid",
-                children: "Please provide a valid email."
-              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Text, {
-                style: {
-                  color: "red"
-                },
-                children: error == "email exists" ? "Email in use" : ""
-              })]
-            })
-          }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Row, {
-            children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Form"].Group, {
-              controlId: "validationCustomUsername",
-              style: {
-                width: "100%"
-              },
-              children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Label, {
-                children: "Username"
-              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["InputGroup"], {
-                hasValidation: true,
-                children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-                  style: {
-                    width: "100%",
-                    display: "flex"
-                  },
-                  children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["InputGroup"].Prepend, {
-                    children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["InputGroup"].Text, {
-                      id: "inputGroupPrepend",
-                      style: {
-                        height: "100%"
-                      },
-                      children: "@"
-                    })
-                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Control, {
-                    type: "text",
-                    style: {
-                      height: "100%"
-                    },
-                    pattern: "[a-z0-9]+",
-                    value: username,
-                    onChange: e => setUsername(e.target.value),
-                    placeholder: "Username",
-                    "aria-describedby": "inputGroupPrepend",
-                    required: true
-                  })]
-                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Text, {
-                  style: {
-                    width: "100%"
-                  },
-                  children: "Only alphabets and numbers allowed"
-                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Control.Feedback, {
-                  type: "invalid",
-                  children: "Please choose a username."
-                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Text, {
-                  style: {
-                    color: "red"
-                  },
-                  children: error == "username exists" ? "Username in use" : ""
-                })]
-              })]
-            })
-          }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Row, {
-            children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Form"].Group, {
-              controlId: "validationCustom03",
-              style: {
-                width: "100%"
-              },
-              children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Label, {
-                children: "Password"
-              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Control, {
-                pattern: "(?=.*\\d)(?=\\S+$)(?=.*[a-z])(?=.*[A-Z]).{8,}",
-                type: "password",
-                value: password,
-                onChange: e => setPassword(e.target.value),
-                placeholder: "Password",
-                required: true
-              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Text, {
-                children: "Must contain at least one number and one uppercase and lowercase letter, no spaces and at least 8 or more characters"
-              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Control.Feedback, {
-                type: "invalid",
-                children: "Please provide a valid password."
-              })]
-            })
-          }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("center", {
-            children: ["Already registered ?", " ", /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
-              onClick: () => {
-                setState("login");
-                setValidatedRegister(false);
-                setPassword("");
-                setEmail("");
-                setName("");
-                setUsername("");
-                setError("");
-              },
-              style: {
-                cursor: "pointer"
-              },
-              children: "Click Here"
-            })]
-          })]
-        }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Modal"].Footer, {
-          children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Button"], {
-            style: {
-              border: "none"
-            },
-            variant: "secondary",
-            onClick: () => {
-              setShow(false);
-              setValidatedRegister(false);
-              setPassword("");
-              setEmail("");
-              setName("");
-              setUsername("");
-              setError("");
-            },
-            children: "Close"
-          }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Button"], {
-            style: {
-              border: "none"
-            },
-            variant: "primary",
-            type: "submit",
-            children: [buttonLoading ? /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Spinner"], {
-              size: "sm",
-              animation: "border"
-            }) : "", " ", "Register"]
-          })]
-        })]
-      })
-    })), state == "login" && /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Modal"], _objectSpread(_objectSpread({
-      size: "lg"
-    }, props), {}, {
-      "aria-labelledby": "contained-modal-title-vcenter",
-      centered: true,
-      show: show,
-      onHide: () => {
-        setShow(false);
-        setValidatedLogin(false);
-        setPassword("");
-        setEmail("");
-        setName("");
-        setUsername("");
-        setError("");
-      },
-      children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Form"], {
-        noValidate: true,
-        validated: validatedLogin,
-        onSubmit: handleSubmitLogin,
-        children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Modal"].Header, {
-          closeButton: true,
-          children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Modal"].Title, {
-            children: "Login"
-          })
-        }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Modal"].Body, {
-          children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Row, {
-            children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Form"].Group, {
-              controlId: "validationCustomUsername",
-              style: {
-                width: "100%"
-              },
-              children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Label, {
-                children: "Username"
-              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["InputGroup"], {
-                hasValidation: true,
-                children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-                  style: {
-                    width: "100%",
-                    display: "flex"
-                  },
-                  children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["InputGroup"].Prepend, {
-                    children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["InputGroup"].Text, {
-                      id: "inputGroupPrepend",
-                      style: {
-                        height: "100%"
-                      },
-                      children: "@"
-                    })
-                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Control, {
-                    type: "text",
-                    style: {
-                      height: "100%"
-                    },
-                    value: username,
-                    onChange: e => setUsername(e.target.value),
-                    placeholder: "Username",
-                    "aria-describedby": "inputGroupPrepend",
-                    required: true
-                  })]
-                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Control.Feedback, {
-                  type: "invalid",
-                  true: true,
-                  children: "Please choose a username."
-                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Text, {
-                  style: {
-                    color: "red"
-                  },
-                  children: error == "username" ? "Invalid username" : ""
-                })]
-              })]
-            })
-          }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Row, {
-            children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Form"].Group, {
-              controlId: "validationCustom03",
-              style: {
-                width: "100%"
-              },
-              children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Label, {
-                children: "Password"
-              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Control, {
-                pattern: "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}",
-                type: "password",
-                value: password,
-                onChange: e => setPassword(e.target.value),
-                placeholder: "Password",
-                required: true
-              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Control.Feedback, {
-                type: "invalid",
-                children: "Please provide a valid password."
-              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Text, {
-                style: {
-                  color: "red"
-                },
-                children: error == "password" ? "invalid password" : ""
-              })]
-            })
-          }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("center", {
-            children: ["Not yet registered ?", " ", /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
-              onClick: () => {
-                setState("register");
-                setValidatedLogin(false);
-                setPassword("");
-                setEmail("");
-                setName("");
-                setUsername("");
-                setError("");
-              },
-              style: {
-                cursor: "pointer"
-              },
-              children: "Click Here"
-            })]
-          })]
-        }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Modal"].Footer, {
-          children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Button"], {
-            style: {
-              border: "none"
-            },
-            variant: "secondary",
-            onClick: () => {
-              setShow(false);
-              setValidatedLogin(false);
-              setPassword("");
-              setEmail("");
-              setName("");
-              setUsername("");
-              setError("");
-            },
-            children: "Close"
-          }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Button"], {
-            style: {
-              border: "none"
-            },
-            variant: "primary",
-            type: "submit",
-            children: [buttonLoading ? /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Spinner"], {
-              size: "sm",
-              animation: "border"
-            }) : "", " ", "Login"]
-          })]
-        })]
-      })
-    }))]
-  });
-}
-// EXTERNAL MODULE: ./node_modules/next/image.js
-var next_image = __webpack_require__("Aiso");
-var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
-
-// CONCATENATED MODULE: ./components/footer.js
-
-
-
-
-
-
-
-
-function Footer() {
-  const {
-    0: validated,
-    1: setValidated
-  } = Object(external_react_["useState"])(false);
-  const {
-    0: buttonLoading,
-    1: setButtonLoading
-  } = Object(external_react_["useState"])(false);
-
-  const handleSubmit = event => {
-    const form = event.currentTarget;
-
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-      setValidated(true);
-    } else {
-      event.preventDefault();
-      setButtonLoading(true);
-      external_axios_default.a.post("/api/contact", {
-        email: email,
-        message: message
-      }).then(setButtonLoading(false)).then(setMessage("")).then(setValidated(false)).then(setEmail(""));
-    }
-  };
-
-  const {
-    0: message,
-    1: setMessage
-  } = Object(external_react_["useState"])("");
-  const {
-    0: email,
-    1: setEmail
-  } = Object(external_react_["useState"])("");
-  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("footer", {
-    id: "footer",
-    className: "footer-1",
-    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-      className: "main-footer widgets-dark typo-light",
-      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-        className: "",
-        style: {
-          marginRight: "20px",
-          marginLeft: "20px"
-        },
-        children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-          className: "row",
-          children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-            className: "col-xs-12 col-sm-6 col-md-3",
-            children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-              className: "widget subscribe no-box",
-              children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-                href: "/",
-                style: {
-                  cursor: "pointer"
-                },
-                children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("h5", {
-                  className: "widget-title",
-                  style: {
-                    cursor: "pointer"
-                  },
-                  children: ["Infinity", /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {})]
-                })
-              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("p", {
-                children: "Infinity offers an opportunity to every blogger out there to display their thoughts in front of everyone. \u2018Better to write for yourself and have no public, than to write for the public and have no self\u2019. Infinity is a website where you can write your thoughts and let people live in a thousand worlds before they die."
-              })]
-            })
-          }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-            className: "col-xs-12 col-sm-6 col-md-3",
-            children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-              className: "widget no-box",
-              children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("h5", {
-                className: "widget-title",
-                children: ["Quick Links", /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {})]
-              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("ul", {
-                className: "thumbnail-widget",
-                children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("li", {
-                  children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-                    href: "/",
-                    children: "\xA0Home"
-                  })
-                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("li", {
-                  children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-                    href: "/about",
-                    children: "\xA0About"
-                  })
-                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("li", {
-                  children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-                    href: "/blogs",
-                    children: "\xA0Blogs"
-                  })
-                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("li", {
-                  children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-                    href: "/dashboard",
-                    children: "\xA0Dashboard"
-                  })
-                })]
-              })]
-            })
-          }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-            className: "col-xs-12 col-sm-6 col-md-3",
-            children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-              className: "widget no-box",
-              children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("h5", {
-                className: "widget-title",
-                children: ["Follow up", /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {})]
-              }), [{
-                url: "https://www.facebook.com/infinity.newTechnology",
-                image: "/facebook.webp",
-                media: "facebook"
-              }, {
-                url: "https://www.instagram.com/infinity.newtech/",
-                image: "/instagram.webp",
-                media: "instagram"
-              }, {
-                url: "https://twitter.com/infinityNewTech",
-                image: "/twitter.webp",
-                media: "twitter"
-              }, {
-                url: "https://www.linkedin.com/in/arnav-gupta-0922341a9/",
-                image: "/linkedin.webp",
-                media: "linkedin"
-              }, {
-                url: "https://www.youtube.com/channel/UCzzfqCy-j9XZA5KNosqzh6w",
-                image: "/youtubeStudio.webp",
-                media: "youtubeStudio"
-              }].map(e => /*#__PURE__*/Object(jsx_runtime_["jsxs"])("a", {
-                className: "fa",
-                href: e.url,
-                style: {
-                  marginRight: "4px"
-                },
-                children: [" ", /*#__PURE__*/Object(jsx_runtime_["jsx"])(image_default.a, {
-                  src: e.image,
-                  alt: e.media,
-                  height: "11",
-                  width: "11px"
-                })]
-              }))]
-            })
-          }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("br", {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])("br", {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-            className: "col-xs-12 col-sm-6 col-md-3",
-            children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-              className: "widget no-box",
-              children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("h5", {
-                className: "widget-title",
-                children: ["Contact Us", /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {})]
-              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("p", {
-                children: "Wanna ask something? Send a message here."
-              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("br", {}), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Form"], {
-                className: "emailfield",
-                noValidate: true,
-                validated: validated,
-                onSubmit: handleSubmit,
-                children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Form"].Group, {
-                  md: "4",
-                  controlId: "validationCustom01",
-                  children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Control, {
-                    required: true,
-                    type: "email",
-                    placeholder: "Email",
-                    pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}",
-                    value: email,
-                    onChange: e => setEmail(e.target.value)
-                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Control.Feedback, {
-                    children: "Looks good!"
-                  })]
-                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Group, {
-                  md: "4",
-                  controlId: "validationCustom02",
-                  children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Form"].Control, {
-                    required: true,
-                    type: "text",
-                    placeholder: "Message",
-                    value: message,
-                    onChange: e => setMessage(e.target.value)
-                  })
-                }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_react_bootstrap_["Button"], {
-                  style: {
-                    border: "none"
-                  },
-                  type: "submit",
-                  children: [buttonLoading ? /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_bootstrap_["Spinner"], {
-                    size: "sm",
-                    animation: "border"
-                  }) : "", " ", "Send"]
-                })]
-              })]
-            })
-          })]
-        })
-      })
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-      className: "footer-copyright",
-      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-        className: "container",
-        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-          className: "row",
-          children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-            className: "col-md-12 text-center",
-            children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("p", {
-              children: ["Copyright", " ", /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-                href: "/",
-                style: {
-                  color: "white"
-                },
-                children: "Infinity"
-              }), " ", "@ 2021. All rights reserved."]
-            })
-          })
-        })
-      })
-    })]
-  });
-}
-// EXTERNAL MODULE: ./components/head.js
-var head = __webpack_require__("tXcZ");
-
-// EXTERNAL MODULE: ./node_modules/bootstrap/dist/css/bootstrap.min.css
-var bootstrap_min = __webpack_require__("q4sD");
-
-// EXTERNAL MODULE: ./node_modules/nprogress/nprogress.css
-var nprogress = __webpack_require__("pdi6");
-
-// EXTERNAL MODULE: external "nprogress"
-var external_nprogress_ = __webpack_require__("GvLQ");
-var external_nprogress_default = /*#__PURE__*/__webpack_require__.n(external_nprogress_);
-
-// EXTERNAL MODULE: ./styles/globals.css
-var globals = __webpack_require__("zPlV");
-
-// EXTERNAL MODULE: external "axios-progress-bar"
-var external_axios_progress_bar_ = __webpack_require__("jQS+");
-
-// CONCATENATED MODULE: ./pages/_app.js
-
-
-
-function _app_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _app_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { _app_ownKeys(Object(source), true).forEach(function (key) { _app_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { _app_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _app_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-
-
-
-
-
-
  //loadProgressBar()
 
-router_default.a.events.on("routeChangeStart", () => external_nprogress_default.a.start());
-router_default.a.events.on("routeChangeComplete", () => external_nprogress_default.a.done());
-router_default.a.events.on("routeChangeError", () => external_nprogress_default.a.done());
-external_nprogress_default.a.configure({
+next_router__WEBPACK_IMPORTED_MODULE_5___default.a.events.on("routeChangeStart", () => nprogress__WEBPACK_IMPORTED_MODULE_7___default.a.start());
+next_router__WEBPACK_IMPORTED_MODULE_5___default.a.events.on("routeChangeComplete", () => nprogress__WEBPACK_IMPORTED_MODULE_7___default.a.done());
+next_router__WEBPACK_IMPORTED_MODULE_5___default.a.events.on("routeChangeError", () => nprogress__WEBPACK_IMPORTED_MODULE_7___default.a.done());
+nprogress__WEBPACK_IMPORTED_MODULE_7___default.a.configure({
   showSpinner: false
 });
 
@@ -1266,8 +263,8 @@ function MyApp({
   const altc = "logo of the infinity website";
   const tags = "blog, infinity, passionate bloggers, blogs, passionate, write, read, post, live thousand lives in one world";
   const card = "summary_large_image";
-  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(head["a" /* default */], {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_head__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], {
       description: description,
       title: title,
       url: url,
@@ -1277,13 +274,11 @@ function MyApp({
       altc: altc,
       tags: tags,
       card: card
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Navigation, {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])("main", {
-      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Component, _app_objectSpread({}, pageProps))
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Footer, {})]
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(Component, _objectSpread({}, pageProps))]
   });
 }
 
-/* harmony default export */ var _app = __webpack_exports__["default"] = (MyApp);
+/* harmony default export */ __webpack_exports__["default"] = (MyApp);
 
 /***/ }),
 
@@ -2150,6 +1145,250 @@ function getRouteRegex(normalizedRoute) {
 /***/ (function(module, exports) {
 
 module.exports = require("next/dist/next-server/lib/router/router");
+
+/***/ }),
+
+/***/ "aIN1":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Footer; });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("YFqc");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("Aiso");
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("zr5I");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("IZS3");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+
+function Footer() {
+  const {
+    0: validated,
+    1: setValidated
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
+  const {
+    0: buttonLoading,
+    1: setButtonLoading
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
+
+  const handleSubmit = event => {
+    const form = event.currentTarget;
+
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+      setValidated(true);
+    } else {
+      event.preventDefault();
+      setButtonLoading(true);
+      axios__WEBPACK_IMPORTED_MODULE_4___default.a.post("/api/contact", {
+        email: email,
+        message: message
+      }).then(setButtonLoading(false)).then(setMessage("")).then(setValidated(false)).then(setEmail(""));
+    }
+  };
+
+  const {
+    0: message,
+    1: setMessage
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])("");
+  const {
+    0: email,
+    1: setEmail
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])("");
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("footer", {
+    id: "footer",
+    className: "footer-1",
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+      className: "main-footer widgets-dark typo-light",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+        className: "",
+        style: {
+          marginRight: "20px",
+          marginLeft: "20px"
+        },
+        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
+          className: "row",
+          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+            className: "col-xs-12 col-sm-6 col-md-3",
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
+              className: "widget subscribe no-box",
+              children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+                href: "/",
+                style: {
+                  cursor: "pointer"
+                },
+                children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("h5", {
+                  className: "widget-title",
+                  style: {
+                    cursor: "pointer"
+                  },
+                  children: ["Infinity", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("span", {})]
+                })
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("p", {
+                children: "Infinity offers an opportunity to every blogger out there to display their thoughts in front of everyone. \u2018Better to write for yourself and have no public, than to write for the public and have no self\u2019. Infinity is a website where you can write your thoughts and let people live in a thousand worlds before they die."
+              })]
+            })
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+            className: "col-xs-12 col-sm-6 col-md-3",
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
+              className: "widget no-box",
+              children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("h5", {
+                className: "widget-title",
+                children: ["Quick Links", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("span", {})]
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("ul", {
+                className: "thumbnail-widget",
+                children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("li", {
+                  children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+                    href: "/",
+                    children: "\xA0Home"
+                  })
+                }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("li", {
+                  children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+                    href: "/about",
+                    children: "\xA0About"
+                  })
+                }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("li", {
+                  children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+                    href: "/blogs",
+                    children: "\xA0Blogs"
+                  })
+                }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("li", {
+                  children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+                    href: "/dashboard",
+                    children: "\xA0Dashboard"
+                  })
+                })]
+              })]
+            })
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+            className: "col-xs-12 col-sm-6 col-md-3",
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
+              className: "widget no-box",
+              children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("h5", {
+                className: "widget-title",
+                children: ["Follow up", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("span", {})]
+              }), [{
+                url: "https://www.facebook.com/infinity.newTechnology",
+                image: "/facebook.webp",
+                media: "facebook"
+              }, {
+                url: "https://www.instagram.com/infinity.newtech/",
+                image: "/instagram.webp",
+                media: "instagram"
+              }, {
+                url: "https://twitter.com/infinityNewTech",
+                image: "/twitter.webp",
+                media: "twitter"
+              }, {
+                url: "https://www.linkedin.com/in/arnav-gupta-0922341a9/",
+                image: "/linkedin.webp",
+                media: "linkedin"
+              }, {
+                url: "https://www.youtube.com/channel/UCzzfqCy-j9XZA5KNosqzh6w",
+                image: "/youtubeStudio.webp",
+                media: "youtubeStudio"
+              }].map(e => /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("a", {
+                className: "fa",
+                href: e.url,
+                style: {
+                  marginRight: "4px"
+                },
+                children: [" ", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_image__WEBPACK_IMPORTED_MODULE_3___default.a, {
+                  src: e.image,
+                  alt: e.media,
+                  height: "11",
+                  width: "11px"
+                })]
+              }))]
+            })
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+            className: "col-xs-12 col-sm-6 col-md-3",
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
+              className: "widget no-box",
+              children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("h5", {
+                className: "widget-title",
+                children: ["Contact Us", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("span", {})]
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("p", {
+                children: "Wanna ask something? Send a message here."
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"], {
+                className: "emailfield",
+                noValidate: true,
+                validated: validated,
+                onSubmit: handleSubmit,
+                children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Group, {
+                  md: "4",
+                  controlId: "validationCustom01",
+                  children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Control, {
+                    required: true,
+                    type: "email",
+                    placeholder: "Email",
+                    pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}",
+                    value: email,
+                    onChange: e => setEmail(e.target.value)
+                  }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Control.Feedback, {
+                    children: "Looks good!"
+                  })]
+                }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Group, {
+                  md: "4",
+                  controlId: "validationCustom02",
+                  children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Control, {
+                    required: true,
+                    type: "text",
+                    placeholder: "Message",
+                    value: message,
+                    onChange: e => setMessage(e.target.value)
+                  })
+                }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+                  style: {
+                    border: "none"
+                  },
+                  type: "submit",
+                  children: [buttonLoading ? /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Spinner"], {
+                    size: "sm",
+                    animation: "border"
+                  }) : "", " ", "Send"]
+                })]
+              })]
+            })
+          })]
+        })
+      })
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+      className: "footer-copyright",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+        className: "container",
+        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+          className: "row",
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+            className: "col-md-12 text-center",
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("p", {
+              children: ["Copyright", " ", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+                href: "/",
+                style: {
+                  color: "white"
+                },
+                children: "Infinity"
+              }), " ", "@ 2021. All rights reserved."]
+            })
+          })
+        })
+      })
+    })]
+  });
+}
 
 /***/ }),
 
@@ -4230,6 +3469,764 @@ function parseRelativeUrl(url, base) {
 /***/ (function(module, exports) {
 
 module.exports = require("axios-progress-bar");
+
+/***/ }),
+
+/***/ "kwih":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Navigation; });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("YFqc");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var algoliasearch_lite__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("5pUN");
+/* harmony import */ var algoliasearch_lite__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(algoliasearch_lite__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("4Q3z");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_instantsearch_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("C3xT");
+/* harmony import */ var react_instantsearch_dom__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_instantsearch_dom__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("/T1H");
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("IZS3");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("zr5I");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var njwt__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("R6Q3");
+/* harmony import */ var njwt__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(njwt__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var next_dist_next_server_lib_router_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("YnbB");
+/* harmony import */ var next_dist_next_server_lib_router_router__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_dist_next_server_lib_router_router__WEBPACK_IMPORTED_MODULE_10__);
+
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+
+
+
+const ReCAPTCHA = next_dynamic__WEBPACK_IMPORTED_MODULE_6___default()(() => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(null, "1cau", 7)), {
+  loadableGenerated: {
+    webpack: () => [/*require.resolve*/("1cau")],
+    modules: ["react-google-recaptcha"]
+  }
+});
+function Navigation(props) {
+  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_4__["useRouter"])();
+  const {
+    0: validatedLogin,
+    1: setValidatedLogin
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
+  const {
+    0: password,
+    1: setPassword
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])("");
+  const {
+    0: email,
+    1: setEmail
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])("");
+  const {
+    0: name,
+    1: setName
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])("");
+  const {
+    0: error,
+    1: setError
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])("");
+  const {
+    0: username,
+    1: setUsername
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])("");
+  const {
+    0: buttonLoading,
+    1: setButtonLoading
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
+  const {
+    0: validatedRegister,
+    1: setValidatedRegister
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
+  const {
+    0: show,
+    1: setShow
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
+  const {
+    0: state,
+    1: setState
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])("register");
+  const {
+    0: status,
+    1: setStatus
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
+  const searchClient = algoliasearch_lite__WEBPACK_IMPORTED_MODULE_3___default()("8PCXEU15SU", "7b08d93fde9eb5eebb3d081f764b2ec4");
+  const CustomToggle = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.forwardRef(({
+    children,
+    onClick
+  }, ref) => /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("img", {
+      ref: ref,
+      onClick: e => {
+        e.preventDefault();
+        onClick(e);
+      },
+      className: "inline",
+      src: "/login.webp",
+      height: "40px",
+      width: "40px",
+      style: {
+        borderRadius: "50%",
+        marginLeft: "5px",
+        marginRight: "5px"
+      },
+      alt: "login profile dropdown icon"
+    })
+  }));
+  const CustomToggleSecond = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.forwardRef(({
+    children,
+    onClick
+  }, ref) => /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("button", {
+    ref: ref,
+    style: {
+      marginRight: "10px",
+      marginLeft: "10px",
+      width: "85px",
+      padding: "0.25px",
+      paddingLeft: "0"
+    },
+    onClick: e => {
+      e.preventDefault();
+      onClick(e);
+    },
+    className: "btn btn-4 btn-4c icon-arrow-right",
+    id: "data",
+    "wfd-id": "62",
+    children: [false ? undefined : "", "\u2193"]
+  }));
+
+  const credirect = () => {
+    setState("");
+    setState("loggedIn");
+    setValidatedRegister(false);
+    setPassword("");
+    setEmail("");
+    setName("");
+    setUsername("");
+    setError("");
+    router.push("/dashboard");
+  };
+
+  const handleSubmitRegister = event => {
+    const form = event.currentTarget;
+    event.preventDefault();
+
+    if (form.checkValidity() === false) {
+      event.stopPropagation();
+      setValidatedRegister(true);
+    } else {
+      setButtonLoading(true);
+      axios__WEBPACK_IMPORTED_MODULE_8___default.a.post("/api/auth/register", {
+        username: username,
+        password: password,
+        email: email,
+        name: name
+      }).then(e => {
+        router.prefetch("/dashboard");
+        setButtonLoading(false);
+        e.data != "username exists" && e.data != "email exists" && e.data != "error" ? (() => {
+          localStorage.setItem("userData", njwt__WEBPACK_IMPORTED_MODULE_9___default.a.create(e.data, "ArnavGod30080422020731017817087571441", "HS512"));
+          credirect();
+          setStatus("loggedIn");
+        })() : setError(e.data);
+      });
+    }
+  };
+
+  const handleSubmitLogin = event => {
+    const form = event.currentTarget;
+    event.preventDefault();
+
+    if (form.checkValidity() === false) {
+      event.stopPropagation();
+      setValidatedLogin(true);
+    } else {
+      setButtonLoading(true);
+      axios__WEBPACK_IMPORTED_MODULE_8___default.a.post("/api/auth/login", {
+        username: username,
+        password: password
+      }).then(e => {
+        router.prefetch("/dashboard");
+        setButtonLoading(false);
+        e.data != "username" && e.data != "password" && e.data != "error" ? (() => {
+          localStorage.setItem("userData", njwt__WEBPACK_IMPORTED_MODULE_9___default.a.create(e.data, "ArnavGod30080422020731017817087571441", "HS512"));
+          credirect();
+          setStatus("loggedIn");
+        })() : setError(e.data);
+      });
+    }
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
+    if (localStorage.getItem("userData")) {
+      njwt__WEBPACK_IMPORTED_MODULE_9___default.a.verify(localStorage.getItem("userData"), "ArnavGod30080422020731017817087571441", "HS512", function (err, verifiedJwt) {
+        if (err) {
+          localStorage.removeItem("userData");
+          setStatus("loggedOut");
+        } else {
+          setStatus("loggedIn");
+          router.prefetch("/dashboard");
+        }
+      });
+    } else {
+      setStatus("loggedOut");
+    }
+  }, []);
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
+    window.addEventListener("storage", () => {
+      if (localStorage.getItem("userData")) {
+        njwt__WEBPACK_IMPORTED_MODULE_9___default.a.verify(localStorage.getItem("userData"), "ArnavGod30080422020731017817087571441", "HS512", function (err, verifiedJwt) {
+          if (err) {
+            localStorage.removeItem("userData");
+            setStatus("loggedOut");
+          } else {
+            setStatus("loggedIn");
+            router.prefetch("/dashboard");
+          }
+        });
+      } else {
+        setStatus("loggedOut");
+      }
+    });
+  }, []);
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_instantsearch_dom__WEBPACK_IMPORTED_MODULE_5__["InstantSearch"], {
+      searchClient: searchClient,
+      indexName: "dev_BLOGS",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("nav", {
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+          href: "/",
+          id: "image",
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("img", {
+            id: "image",
+            alt: "The logo of the website which showcases a symbol of infinity combined to wires",
+            src: "/logo.png",
+            width: "60px",
+            height: "60px",
+            style: {
+              borderRadius: "50%",
+              marginLeft: "5px",
+              marginRight: "5px"
+            },
+            className: "d-inline-block align-top"
+          })
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Dropdown"], {
+            id: "navToggle",
+            children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Dropdown"].Toggle, {
+              as: CustomToggleSecond
+            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Dropdown"].Menu, {
+              children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Dropdown"].Item, {
+                children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+                  href: "/",
+                  children: "Home"
+                })
+              }, "home"), status && (status == "loggedIn" ? /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Dropdown"].Item, {
+                children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+                  href: "/blogs",
+                  children: "Blogs"
+                })
+              }, "blogs") : /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Dropdown"].Item, {
+                children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+                  href: "/about",
+                  children: "About"
+                })
+              }, "about"))]
+            }), " "]
+          })
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
+          id: "inDropdown",
+          children: [" ", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+            href: "/",
+            style: {
+              display: "inherit",
+              marginRight: "10px"
+            },
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("button", {
+              className: "btn btn-4 btn-4c icon-arrow-right",
+              style: {
+                marginRight: "5px"
+              },
+              id: false ? undefined : "data",
+              "wfd-id": "62",
+              children: "Home"
+            })
+          }), status && (status != "loggedIn" ? /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+            href: "/about",
+            style: {
+              display: "inherit",
+              marginRight: "10px"
+            },
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("button", {
+              className: "btn btn-4 btn-4c icon-arrow-right",
+              style: {
+                marginRight: "5px"
+              },
+              id: false ? undefined : "data",
+              "wfd-id": "62",
+              children: "About"
+            })
+          }) : /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+            href: "/blogs",
+            style: {
+              display: "inherit",
+              marginRight: "10px"
+            },
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("button", {
+              className: "btn btn-4 btn-4c icon-arrow-right",
+              style: {
+                marginRight: "5px"
+              },
+              id: false ? undefined : "data",
+              "wfd-id": "62",
+              children: "Blogs"
+            })
+          }))]
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_instantsearch_dom__WEBPACK_IMPORTED_MODULE_5__["SearchBox"], {
+          style: {
+            width: "100%"
+          },
+          translations: {
+            placeholder: "Search"
+          }
+        }), status && (status !== "loggedIn" ? /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
+          style: {
+            display: "inherit"
+          },
+          children: [" ", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("button", {
+            onClick: () => {
+              setShow(true);
+              setState("register");
+            },
+            style: {
+              padding: "0",
+              marginLeft: "2px",
+              border: "none",
+              backgroundColor: "transparent"
+            },
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("img", {
+              className: "inline",
+              src: "/signip.webp",
+              height: "40px",
+              width: "40px",
+              style: {
+                borderRadius: "50%",
+                marginLeft: "2px"
+              },
+              alt: "signup button represented with an icon"
+            })
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("button", {
+            onClick: () => {
+              setShow(true);
+              setState("login");
+            },
+            style: {
+              padding: "0",
+              border: "none",
+              marginLeft: "2px",
+              marginRight: "10px",
+              backgroundColor: "transparent"
+            },
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("img", {
+              className: "inline",
+              src: "/login.png",
+              height: "40px",
+              width: "40px",
+              style: {
+                borderRadius: "50%",
+                marginLeft: "2px"
+              },
+              alt: "login button represented with an icon"
+            })
+          })]
+        }) : /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Dropdown"], {
+            children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Dropdown"].Toggle, {
+              as: CustomToggle
+            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Dropdown"].Menu, {
+              children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Dropdown"].Item, {
+                children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+                  href: "/active",
+                  children: "Profile"
+                })
+              }, "profile"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Dropdown"].Item, {
+                children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+                  href: "/bookmarked",
+                  children: "Bookmarks"
+                })
+              }, "bookmarks"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Dropdown"].Item, {
+                children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+                  href: "/dashboard",
+                  children: "New Post"
+                })
+              }, "new post"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Dropdown"].Item, {
+                children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
+                  onClick: () => {
+                    localStorage.removeItem("userData");
+                    setStatus("loggedOut");
+                    router.push("/");
+                  },
+                  children: "Logout"
+                })
+              }, "logout")]
+            })]
+          })
+        }))]
+      })
+    }), state == "register" && /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Modal"], _objectSpread(_objectSpread({
+      size: "lg"
+    }, props), {}, {
+      "aria-labelledby": "contained-modal-title-vcenter",
+      centered: true,
+      show: show,
+      onHide: () => {
+        setShow(false);
+        setValidatedRegister(false);
+        setPassword("");
+        setEmail("");
+        setName("");
+        setUsername("");
+        setError("");
+      },
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"], {
+        noValidate: true,
+        validated: validatedRegister,
+        onSubmit: handleSubmitRegister,
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Modal"].Header, {
+          closeButton: true,
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Modal"].Title, {
+            children: "Register"
+          })
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Modal"].Body, {
+          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Row, {
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Group, {
+              controlId: "validationCustom03",
+              style: {
+                width: "100%"
+              },
+              children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Label, {
+                children: "Name"
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Control, {
+                type: "text",
+                placeholder: "Name",
+                required: true,
+                value: name,
+                onChange: e => setName(e.target.value)
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Control.Feedback, {
+                type: "invalid",
+                children: "Please provide a valid name."
+              })]
+            })
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Row, {
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Group, {
+              controlId: "validationCustom03",
+              style: {
+                width: "100%"
+              },
+              children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Label, {
+                children: "Email"
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Control, {
+                pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}",
+                type: "text",
+                value: email,
+                onChange: e => setEmail(e.target.value),
+                placeholder: "Email",
+                required: true
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Control.Feedback, {
+                type: "invalid",
+                children: "Please provide a valid email."
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Text, {
+                style: {
+                  color: "red"
+                },
+                children: error == "email exists" ? "Email in use" : ""
+              })]
+            })
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Row, {
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Group, {
+              controlId: "validationCustomUsername",
+              style: {
+                width: "100%"
+              },
+              children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Label, {
+                children: "Username"
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["InputGroup"], {
+                hasValidation: true,
+                children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
+                  style: {
+                    width: "100%",
+                    display: "flex"
+                  },
+                  children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["InputGroup"].Prepend, {
+                    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["InputGroup"].Text, {
+                      id: "inputGroupPrepend",
+                      style: {
+                        height: "100%"
+                      },
+                      children: "@"
+                    })
+                  }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Control, {
+                    type: "text",
+                    style: {
+                      height: "100%"
+                    },
+                    pattern: "[a-z0-9]+",
+                    value: username,
+                    onChange: e => setUsername(e.target.value),
+                    placeholder: "Username",
+                    "aria-describedby": "inputGroupPrepend",
+                    required: true
+                  })]
+                }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Text, {
+                  style: {
+                    width: "100%"
+                  },
+                  children: "Only alphabets and numbers allowed"
+                }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Control.Feedback, {
+                  type: "invalid",
+                  children: "Please choose a username."
+                }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Text, {
+                  style: {
+                    color: "red"
+                  },
+                  children: error == "username exists" ? "Username in use" : ""
+                })]
+              })]
+            })
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Row, {
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Group, {
+              controlId: "validationCustom03",
+              style: {
+                width: "100%"
+              },
+              children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Label, {
+                children: "Password"
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Control, {
+                pattern: "(?=.*\\d)(?=\\S+$)(?=.*[a-z])(?=.*[A-Z]).{8,}",
+                type: "password",
+                value: password,
+                onChange: e => setPassword(e.target.value),
+                placeholder: "Password",
+                required: true
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Text, {
+                children: "Must contain at least one number and one uppercase and lowercase letter, no spaces and at least 8 or more characters"
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Control.Feedback, {
+                type: "invalid",
+                children: "Please provide a valid password."
+              })]
+            })
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("center", {
+            children: ["Already registered ?", " ", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
+              onClick: () => {
+                setState("login");
+                setValidatedRegister(false);
+                setPassword("");
+                setEmail("");
+                setName("");
+                setUsername("");
+                setError("");
+              },
+              style: {
+                cursor: "pointer"
+              },
+              children: "Click Here"
+            })]
+          })]
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Modal"].Footer, {
+          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+            style: {
+              border: "none"
+            },
+            variant: "secondary",
+            onClick: () => {
+              setShow(false);
+              setValidatedRegister(false);
+              setPassword("");
+              setEmail("");
+              setName("");
+              setUsername("");
+              setError("");
+            },
+            children: "Close"
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+            style: {
+              border: "none"
+            },
+            variant: "primary",
+            type: "submit",
+            children: [buttonLoading ? /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Spinner"], {
+              size: "sm",
+              animation: "border"
+            }) : "", " ", "Register"]
+          })]
+        })]
+      })
+    })), state == "login" && /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Modal"], _objectSpread(_objectSpread({
+      size: "lg"
+    }, props), {}, {
+      "aria-labelledby": "contained-modal-title-vcenter",
+      centered: true,
+      show: show,
+      onHide: () => {
+        setShow(false);
+        setValidatedLogin(false);
+        setPassword("");
+        setEmail("");
+        setName("");
+        setUsername("");
+        setError("");
+      },
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"], {
+        noValidate: true,
+        validated: validatedLogin,
+        onSubmit: handleSubmitLogin,
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Modal"].Header, {
+          closeButton: true,
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Modal"].Title, {
+            children: "Login"
+          })
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Modal"].Body, {
+          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Row, {
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Group, {
+              controlId: "validationCustomUsername",
+              style: {
+                width: "100%"
+              },
+              children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Label, {
+                children: "Username"
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["InputGroup"], {
+                hasValidation: true,
+                children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
+                  style: {
+                    width: "100%",
+                    display: "flex"
+                  },
+                  children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["InputGroup"].Prepend, {
+                    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["InputGroup"].Text, {
+                      id: "inputGroupPrepend",
+                      style: {
+                        height: "100%"
+                      },
+                      children: "@"
+                    })
+                  }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Control, {
+                    type: "text",
+                    style: {
+                      height: "100%"
+                    },
+                    value: username,
+                    onChange: e => setUsername(e.target.value),
+                    placeholder: "Username",
+                    "aria-describedby": "inputGroupPrepend",
+                    required: true
+                  })]
+                }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Control.Feedback, {
+                  type: "invalid",
+                  true: true,
+                  children: "Please choose a username."
+                }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Text, {
+                  style: {
+                    color: "red"
+                  },
+                  children: error == "username" ? "Invalid username" : ""
+                })]
+              })]
+            })
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Row, {
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Group, {
+              controlId: "validationCustom03",
+              style: {
+                width: "100%"
+              },
+              children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Label, {
+                children: "Password"
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Control, {
+                pattern: "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}",
+                type: "password",
+                value: password,
+                onChange: e => setPassword(e.target.value),
+                placeholder: "Password",
+                required: true
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Control.Feedback, {
+                type: "invalid",
+                children: "Please provide a valid password."
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Form"].Text, {
+                style: {
+                  color: "red"
+                },
+                children: error == "password" ? "invalid password" : ""
+              })]
+            })
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("center", {
+            children: ["Not yet registered ?", " ", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
+              onClick: () => {
+                setState("register");
+                setValidatedLogin(false);
+                setPassword("");
+                setEmail("");
+                setName("");
+                setUsername("");
+                setError("");
+              },
+              style: {
+                cursor: "pointer"
+              },
+              children: "Click Here"
+            })]
+          })]
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Modal"].Footer, {
+          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+            style: {
+              border: "none"
+            },
+            variant: "secondary",
+            onClick: () => {
+              setShow(false);
+              setValidatedLogin(false);
+              setPassword("");
+              setEmail("");
+              setName("");
+              setUsername("");
+              setError("");
+            },
+            children: "Close"
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+            style: {
+              border: "none"
+            },
+            variant: "primary",
+            type: "submit",
+            children: [buttonLoading ? /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Spinner"], {
+              size: "sm",
+              animation: "border"
+            }) : "", " ", "Login"]
+          })]
+        })]
+      })
+    }))]
+  });
+}
 
 /***/ }),
 
