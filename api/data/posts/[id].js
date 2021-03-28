@@ -183,7 +183,14 @@ __webpack_require__.r(__webpack_exports__);
   }).toArray();
   posts.images = [];
   posts.image = "";
-  res.json(posts);
+
+  if (posts.length != 0) {
+    res.json(posts);
+  } else {
+    res.json([{
+      error: true
+    }]);
+  }
 });
 
 /***/ }),

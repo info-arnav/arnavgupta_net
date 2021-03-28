@@ -101,6 +101,13 @@ module.exports = __webpack_require__("aEv4");
 
 /***/ }),
 
+/***/ "4Q3z":
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
+
+/***/ }),
+
 /***/ "F5FC":
 /***/ (function(module, exports) {
 
@@ -131,6 +138,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("tXcZ");
 /* harmony import */ var njwt__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("R6Q3");
 /* harmony import */ var njwt__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(njwt__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("4Q3z");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -147,9 +157,14 @@ function Article({
   const alts = "logo of the infinity website";
   const imagec = `https://www.arnavgupta.net/api/image/${data._id}`;
   const altc = data.imageDescription;
+  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_5__["useRouter"])();
   const tag = `blog, infinity, passionate bloggers, blogs, passionate, write, read, post, live thousand lives in one world, ${data.title}, ${data.tags && data.tags.toString()}`;
   const card = "summary_large_image";
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
+    if (data.error) {
+      router.push("/");
+    }
+
     if (localStorage.getItem("userData")) {
       njwt__WEBPACK_IMPORTED_MODULE_4___default.a.verify(localStorage.getItem("userData"), "ArnavGod30080422020731017817087571441", "HS512", async function (err, verifiedJwt) {
         if (!err) {
