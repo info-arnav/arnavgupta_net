@@ -216,7 +216,10 @@ __webpack_require__.r(__webpack_exports__);
         }).then(e => {
           e.ops.images = [];
           return e;
-        }).then(e => res.status(200).json(e.ops));
+        }).then(e => res.status(200).json([{
+          _id: e.ops._id,
+          username: e.ops.username
+        }]));
       } else {
         res.status(202).json("email exists");
       }

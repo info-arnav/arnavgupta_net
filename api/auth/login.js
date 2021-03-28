@@ -186,7 +186,10 @@ __webpack_require__.r(__webpack_exports__);
       bcryptjs__WEBPACK_IMPORTED_MODULE_1___default.a.compare(req.body.password, userData[0].password, function (err, result) {
         if (result) {
           userData.images = [];
-          res.status(200).send(userData);
+          res.status(200).send({
+            _id: userData._id,
+            username: userData.username
+          });
         } else {
           res.status(202).send("password");
         }

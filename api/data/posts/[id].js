@@ -178,14 +178,21 @@ __webpack_require__.r(__webpack_exports__);
   const {
     id
   } = req.query;
-  const posts = await db.collection("posts").find({
-    _id: Object(bson__WEBPACK_IMPORTED_MODULE_0__["ObjectID"])(id)
-  }).toArray();
-  posts.images = [];
-  posts.image = "";
 
-  if (posts.length != 0) {
-    res.json(posts);
+  if (id.length == 24) {
+    const posts = await db.collection("posts").find({
+      _id: Object(bson__WEBPACK_IMPORTED_MODULE_0__["ObjectID"])(id)
+    }).toArray();
+    posts.images = [];
+    posts.image = "";
+
+    if (posts.length != 0) {
+      res.json(posts);
+    } else {
+      res.json([{
+        error: true
+      }]);
+    }
   } else {
     res.json([{
       error: true
