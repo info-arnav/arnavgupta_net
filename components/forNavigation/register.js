@@ -104,6 +104,7 @@ export default function Register() {
             "userData",
             jwt.create(e.data, "ArnavGod30080422020731017817087571441", "HS512")
           );
+          localStorage.setItem("username", e.data.username);
           router.prefetch("/dashboard");
           location.replace("/dashboard");
         });

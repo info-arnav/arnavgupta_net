@@ -25,14 +25,19 @@ export default function Navigation(props) {
         function (err, verifiedJwt) {
           if (err) {
             localStorage.removeItem("userData");
+            localStorage.getItem("username") &&
+              localStorage.removeItem("username");
+            location.replace("/");
             setStatus("loggedOut");
           } else {
             router.prefetch("/dashboard");
+            localStorage.setItem("username", verifiedJwt.body[0].username);
             setStatus("loggedIn");
           }
         }
       );
     } else {
+      localStorage.getItem("username") && localStorage.removeItem("username");
       setStatus("loggedOut");
     }
   }, []);

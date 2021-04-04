@@ -34,20 +34,14 @@ export default function User({ data }) {
     if (data.error) {
       router.push("/page_does_not_exist");
     }
-    if (localStorage.getItem("userData")) {
-      Jwt.verify(
-        localStorage.getItem("userData"),
-        "ArnavGod30080422020731017817087571441",
-        "HS512",
-        async function (err, verifiedJwt) {
-          if (!err) {
-            await axios.post("/api/profile/views", {
-              id: data.username,
-              user: verifiedJwt.body[0].username,
-            });
-          }
-        }
-      );
+    if (localStorage.getItem("userName")) {
+      async function Post() {
+        await axios.post("/api/profile/views", {
+          id: data.username,
+          user: localStorage.getItem("username"),
+        });
+      }
+      Post();
     }
   }, [condition, computerProgramme]);
   return (
