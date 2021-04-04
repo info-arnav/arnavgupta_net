@@ -39,7 +39,7 @@ export default function Login() {
                   )
                 );
                 router.prefetch("/dashboard");
-                localStorage.setItem("username", e.data.username);
+                localStorage.setItem("username", e.data[0].username);
                 setButtonLoading(true);
                 setDisabled(true);
                 location.replace("/dashboard");

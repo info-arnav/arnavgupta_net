@@ -5,7 +5,7 @@ import Head from "../components/head";
 export default function B() {
   const router = useRouter();
   useEffect(() => {
-    if (!localStorage.getItem("userName")) {
+    if (!localStorage.getItem("username")) {
       router.push("/");
     }
   });

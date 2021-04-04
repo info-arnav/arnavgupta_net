@@ -74,6 +74,7 @@ export default function Dashboard() {
   useEffect(() => {
     if (localStorage.getItem("userData")) {
       setUsername(localStorage.getItem("username"));
+      setLoaded(true);
     } else {
       router.push("/");
     }
