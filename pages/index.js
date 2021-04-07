@@ -116,10 +116,10 @@ export default function Home(data) {
                                     <Link style={{}} href={`/tags/${e}`}>
                                       <span
                                         style={{
-                                          fontSize: "8px",
+                                          fontSize: "11px",
                                           fontWeight: "bold",
                                           borderRadius: "5px",
-                                          padding: "2px",
+                                          padding: "5px",
                                           cursor: "pointer",
                                           backgroundColor:
                                             colors[
