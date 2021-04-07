@@ -161,20 +161,8 @@ export default function Dashboard() {
   const [value, setValue] = useState("");
   useEffect(() => {
     if (localStorage.getItem("userData")) {
-      jwt.verify(
-        localStorage.getItem("userData"),
-        "ArnavGod30080422020731017817087571441",
-        "HS512",
-        function (err, verifiedJwt) {
-          if (err) {
-            setLoaded(false);
-            router.push("/");
-          } else {
-            setLoaded(true);
-            setUsername(verifiedJwt.body[0].username);
-          }
-        }
-      );
+      setUsername(localStorage.getItem("username"));
+      setLoaded(true);
     } else {
       router.push("/");
     }

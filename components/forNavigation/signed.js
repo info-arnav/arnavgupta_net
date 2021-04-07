@@ -23,6 +23,7 @@ export default function Signed() {
             <a
               onClick={() => {
                 localStorage.removeItem("userData");
+                localStorage.removeItem("username");
                 location.replace("/");
               }}
             >

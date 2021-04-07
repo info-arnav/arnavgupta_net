@@ -17,6 +17,27 @@ export default function Navigation(props) {
     "7b08d93fde9eb5eebb3d081f764b2ec4"
   );
   useEffect(() => {
+    window.addEventListener(
+      "storage",
+      jwt.verify(
+        localStorage.getItem("userData"),
+        "ArnavGod30080422020731017817087571441",
+        "HS512",
+        function (err, verifiedJwt) {
+          if (err) {
+            localStorage.removeItem("userData");
+            localStorage.getItem("username") &&
+              localStorage.removeItem("username");
+            location.replace("/");
+            setStatus("loggedOut");
+          } else {
+            router.prefetch("/dashboard");
+            localStorage.setItem("username", verifiedJwt.body[0].username);
+            setStatus("loggedIn");
+          }
+        }
+      )
+    );
     if (localStorage.getItem("userData")) {
       jwt.verify(
         localStorage.getItem("userData"),
@@ -25,14 +46,19 @@ export default function Navigation(props) {
         function (err, verifiedJwt) {
           if (err) {
             localStorage.removeItem("userData");
+            localStorage.getItem("username") &&
+              localStorage.removeItem("username");
+            location.replace("/");
             setStatus("loggedOut");
           } else {
             router.prefetch("/dashboard");
+            localStorage.setItem("username", verifiedJwt.body[0].username);
             setStatus("loggedIn");
           }
         }
       );
     } else {
+      localStorage.getItem("username") && localStorage.removeItem("username");
       setStatus("loggedOut");
     }
   }, []);

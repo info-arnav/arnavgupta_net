@@ -1,6 +1,14 @@
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 import Footer from "../components/footer";
 import Head from "../components/head";
 export default function B() {
+  const router = useRouter();
+  useEffect(() => {
+    if (!localStorage.getItem("username")) {
+      router.push("/");
+    }
+  });
   const description =
     "Infinity is both like a website and a diary. A place where all people across the globe get a chance to put their views and talent in front of everyone.";
   const title = "Infinity | Live thousand lives in one world";
